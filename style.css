@@ -1,15 +1,10 @@
-#header {
-  margin: 0;
-  border: 1px solid red;
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
 }
 
 #header p {
   color: red;
-  font-size: 12px;
-  font-weight: bold;
 }
-
-#header a {
-  text-decoration: none;
-}
-/*# sourceMappingURL=style.css.map */
