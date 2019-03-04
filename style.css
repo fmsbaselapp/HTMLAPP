@@ -1,11 +1,5 @@
-#header {
-  margin: 0;
-  border: 1px solid red;
-}
-
-#header h1 {
-  color: red;
-  font-size: 12px;
-  font-weight: bold;
+h1 {
+  font: normal 24px/1.5 "Open Sans", sans-serif;
+  color: #F44336;
 }
 /*# sourceMappingURL=style.css.map */
