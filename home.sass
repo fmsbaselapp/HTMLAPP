@@ -1,26 +1,74 @@
+$fontsize_h1: 20px
+$fontsize_ul: 20px
 
+$padding: 10px
+$margin-seite: 5% auto
+
+$karten_breite: 86%
+$position-karten: fixed left
+$box-schatten: 0 5px 5px rgba(0,0,0,.2)
+
+$hintergrundfarbe-karten: #ffffff
+  
 body
   background-color: #DEE4E7
+  margin: 0
+  overflow: hidden
+  height: 100%
+  
 
 main 
-  section#Stundenplan
-    background: #ffffff
-    padding: 20px
-    margin: 1em auto
+  section#Stundenausfälle
+    background: $hintergrundfarbe-karten
+    padding: $padding
+    margin: $margin-seite
+    margin-top: 66px 
+    margin-bottom: 10px
+    position: $position-karten
     border-radius: 5px
-    box-shadow: 0 5px 5px rgba(0,0,0,.2)
-    width: 80%
+    box-shadow: $box-schatten
+    width: $karten_breite
     
-  h1
-    font-family: poppins, sans-serif
-    font-weight: 400
-    font-style: normal
-    font-size: 20px
+    h1
+      font-family: poppins,sans-serif
+      font-weight: 400
+      font-style: normal
+      font-size: $fontsize_h1
+       
+    p
+      font-family: poppins, sans-serif
+      font-weight: 700
+      font-style: normal
+      font-size: $fontsize_ul
 
-  ul
-    font-family: poppins, sans-serif
-    font-weight: 700
-    font-style: normal
-    font-size: 20px
+
+  section#Stundenplan
+    background: $hintergrundfarbe-karten
+    padding: $padding
+    margin: $margin-seite
+    margin-top: 0px
+    margin-bottom: 0px 
+    position: $position-karten
+    border-radius: 5px
+    box-shadow: $box-schatten
+    width: $karten_breite
+ 
+    
+    
+    div
+      height: 100% 
+
+
+    h1
+      font-family: poppins,sans-serif
+      font-weight: 400
+      font-style: normal
+      font-size: $fontsize_h1
+      
+    ul
+      font-family: poppins, sans-serif
+      font-weight: 700
+      font-style: normal
+      font-size: $fontsize_ul
 
 

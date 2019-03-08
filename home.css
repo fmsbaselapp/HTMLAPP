@@ -1,25 +1,63 @@
+@charset "UTF-8";
 body {
   background-color: #DEE4E7;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
-main section#Stundenplan {
+main section#Stundenausfälle {
   background: #ffffff;
-  padding: 20px;
-  margin: 1em auto;
+  padding: 10px;
+  margin: 5% auto;
+  margin-top: 66px;
+  margin-bottom: 10px;
+  position: fixed left;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  width: 80%;
+  width: 86%;
 }
 
-main h1 {
-  font-family: poppins, sans-serif;
+main section#Stundenausfälle h1 {
+  font-family: poppins,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
 }
 
-main ul {
+main section#Stundenausfälle p {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+main section#Stundenplan {
+  background: #ffffff;
+  padding: 10px;
+  margin: 5% auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: fixed left;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  width: 86%;
+}
+
+main section#Stundenplan div {
+  height: 100%;
+}
+
+main section#Stundenplan h1 {
+  font-family: poppins,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+main section#Stundenplan ul {
   font-family: poppins, sans-serif;
   font-weight: 700;
   font-style: normal;
