@@ -4,20 +4,23 @@ $fontsize_ul: 20px
 $padding: 10px
 $margin-seite: 5% auto
 
-$karten_breite: 86%
-$position-karten: fixed left
+$karten-abstand: 16px
+$position-karten: fixed
 $box-schatten: 0 5px 5px rgba(0,0,0,.2)
 
 $hintergrundfarbe-karten: #ffffff
+$hintergrundfarbe: #DEE4E7
   
 body
-  background-color: #DEE4E7
+  background-color: $hintergrundfarbe
   margin: 0
+  padding: 0
   overflow: hidden
   height: 100%
   
 
 main 
+  
   section#Stundenausfälle
     background: $hintergrundfarbe-karten
     padding: $padding
@@ -25,6 +28,9 @@ main
     margin-top: 66px 
     margin-bottom: 10px
     position: $position-karten
+
+    left: $karten-abstand
+    right: $karten-abstand
     border-radius: 5px
     box-shadow: $box-schatten
     
@@ -40,13 +46,17 @@ main
       font-style: normal
       font-size: $fontsize_ul
 
-
+  div
+    height: 100%
   section#Stundenplan
     background: $hintergrundfarbe-karten
     padding: $padding
     margin: $margin-seite
     margin-bottom: 0px 
     position: $position-karten
+
+    left: $karten-abstand
+    right: $karten-abstand
     border-radius: 5px
     box-shadow: $box-schatten
     

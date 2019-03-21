@@ -2,6 +2,7 @@
 body {
   background-color: #DEE4E7;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   height: 100%;
 }
@@ -12,11 +13,12 @@ main section#Stundenausfälle {
   margin: 5% auto;
   margin-top: 66px;
   margin-bottom: 10px;
-  position: fixed left;
+  position: fixed;
+  left: 16px;
+  right: 16px;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  width: 86%;
 }
 
 main section#Stundenausfälle h1 {
@@ -33,21 +35,21 @@ main section#Stundenausfälle p {
   font-size: 20px;
 }
 
+main div {
+  height: 100%;
+}
+
 main section#Stundenplan {
   background: #ffffff;
   padding: 10px;
   margin: 5% auto;
-  margin-top: 0px;
   margin-bottom: 0px;
-  position: fixed left;
+  position: fixed;
+  left: 16px;
+  right: 16px;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  width: 86%;
-}
-
-main section#Stundenplan div {
-  height: 100%;
 }
 
 main section#Stundenplan h1 {
