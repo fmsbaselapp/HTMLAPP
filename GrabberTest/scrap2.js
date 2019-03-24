@@ -5,13 +5,23 @@ request('http://display.edubs.ch/gl1', (error, response, html) => {
     if(!error && response.statusCode == 200) {
       const $ = cheerio.load(html);
 
-      $('.panel-heading').each((i,el) => {
-        const title = $(el)
-        .find('1b')
+      $('.container').each((i,el) => {
+        const wochentag = $(el)
+        .find('h3')
         .text()
         .replace(/\s\s+/g, '');
 
-      console.log(title);
+      console.log(wochentag);
       });
+
+      $('.container').each((i,el) => {
+        const ausfall = $(el)
+        .find('div.panel-heading')
+        .text()
+        .replace(/\s\s+/g, '');
+
+      console.log(ausfall);
+    });
+
     }
 });
