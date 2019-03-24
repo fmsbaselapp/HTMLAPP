@@ -7,8 +7,9 @@ request('http://display.edubs.ch/gl1', (error, response, html) => {
 
       $('.panel-heading').each((i,el) => {
         const title = $(el)
-        .find('.text')
+        .find('1b')
         .text()
+        .replace(/\s\s+/g, '');
 
       console.log(title);
       });
