@@ -6,7 +6,7 @@ const writeStream = fs.createWriteStream('post.csv');
 // Write Headers
 writeStream.write(`Title,Link,Date \n`);
 
-request('http://codedemos.com/sampleblog', (error, response, html) => {
+request('https://display.edubs.ch/gl1', (error, response, html) => {
   if (!error && response.statusCode == 200) {
     const $ = cheerio.load(html);
 
