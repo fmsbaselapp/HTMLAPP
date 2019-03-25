@@ -14,11 +14,11 @@ request('http://display.edubs.ch/fms1', (error, response, html) => {
         const alles = $(el)
           .find('div.panel.panel-default')
           .text()
-          .replace(/\s\s+/g, ',');
+          .replace(/\s\s+/g, ', \n');
           const wochentag = $(el)
           .find('h3')
           .text()
-          .replace(/\s\s+/g, ',');
+          .replace(/\s\s+/g, ', \n');
 
       //Write Row To CSV
       writeStream.write(`${wochentag}, ${alles} \n`);
