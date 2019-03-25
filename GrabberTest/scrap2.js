@@ -6,7 +6,7 @@ const writeStream = fs.createWriteStream('post.csv');
 //Write Headers
 writeStream.write(`wochentag,ausfall,raum \n`);
 
-request('http://display.edubs.ch/gm1', (error, response, html) => {
+request('http://display.edubs.ch/fms1', (error, response, html) => {
     if(!error && response.statusCode == 200) {
       const $ = cheerio.load(html);
 
