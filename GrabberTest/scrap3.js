@@ -4,7 +4,7 @@ const fs = require('fs');
 const writeStream = fs.createWriteStream('post.csv');
 
 //Write Headers
-writeStream.write(`alles \n`);
+writeStream.write(`wochentag, alles \n`);
 
 request('http://display.edubs.ch/fms1', (error, response, html) => {
     if(!error && response.statusCode == 200) {
@@ -15,9 +15,13 @@ request('http://display.edubs.ch/fms1', (error, response, html) => {
           .find('div.panel.panel-default')
           .text()
           .replace(/\s\s+/g, ',');
+          const wochentag = $(el)
+          .find('h3')
+          .text()
+          .replace(/\s\s+/g, ',');
 
       //Write Row To CSV
-      writeStream.write(`${alles} \n`);
+      writeStream.write(`${wochentag}, ${alles} \n`);
 
 
     });
