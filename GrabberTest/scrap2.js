@@ -23,5 +23,14 @@ request('http://display.edubs.ch/gm1', (error, response, html) => {
       console.log(ausfall);
     });
 
+      $('.container').each((i,el) => {
+        const raum = $(el)
+        .find('div.panel-footer')
+        .text()
+        .replace(/\s\s+/g, '');
+
+      console.log(raum);
+    });
+
     }
 });
