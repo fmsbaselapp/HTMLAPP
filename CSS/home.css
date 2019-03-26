@@ -3,8 +3,8 @@ body {
   background-color: #DEE4E7;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   height: 100%;
+  overflow: hidden;
 }
 
 main {
@@ -17,9 +17,9 @@ main section#Stundenausfälle {
   display: block;
   background: #ffffff;
   padding: 10px;
-  margin-bottom: 10px;
+  overflow-y: scroll;
   margin: auto;
-  width: 87%;
+  max-width: 87%;
   position: relative;
   border-right: 16px;
   border-radius: 5px;
@@ -41,17 +41,16 @@ main section#Stundenausfälle p {
   font-size: 20px;
 }
 
-main div {
-  height: 100%;
-}
-
 main section#Stundenplan {
   background: #ffffff;
   padding: 10px;
+  overflow-y: scroll;
   margin-bottom: 0px;
   position: relative;
-  width: 87%;
+  max-width: 87%;
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);

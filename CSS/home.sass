@@ -14,8 +14,9 @@ body
   background-color: $hintergrundfarbe
   margin: 0
   padding: 0
-  overflow-x: hidden
   height: 100%
+  overflow: hidden
+  -webkit-scrollbar
   
 
 main 
@@ -23,16 +24,16 @@ main
   margin-left: auto
   margin-right: auto
 
-div#Stundenausfälle
-  margin-bottom: 10px  
   
-   section#Stundenausfälle
+  section#Stundenausfälle
     display: block
     background: $hintergrundfarbe-karten
     padding: $padding
 
+    overflow-y: scroll
+
     margin: auto
-    width: 87%
+    max-width: 87%
     position: $position-karten
 
     border-right: 16px
@@ -52,18 +53,20 @@ div#Stundenausfälle
       font-style: normal
       font-size: $fontsize_ul
 
-  div#Stundenplan
-    height: 100%
+
 
   section#Stundenplan
     background: $hintergrundfarbe-karten
     padding: $padding
+
+    overflow-y: scroll
+
     margin-bottom: 0px 
     position: $position-karten
     max-width: 87%
     margin: auto
-
-   
+    margin-top: 10px
+    margin-bottom: 10px
     border-radius: 5px
     box-shadow: $box-schatten
     
