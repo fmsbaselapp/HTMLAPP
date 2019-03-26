@@ -1,4 +1,19 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  -webkit-border-radius: 6px;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+}
+
 body {
   background-color: #DEE4E7;
   margin: 0;

@@ -1,3 +1,10 @@
+::-webkit-scrollbar
+	width: 0px
+::-webkit-scrollbar-track-piece
+	background-color: transparent
+	-webkit-border-radius: 6px
+  
+
 $fontsize_h1: 20px
 $fontsize_ul: 20px
 
@@ -9,6 +16,16 @@ $box-schatten: 0 5px 5px rgba(0,0,0,.2)
 
 $hintergrundfarbe-karten: #ffffff
 $hintergrundfarbe: #DEE4E7
+
+html
+  overflow: scroll
+  overflow-x: hidden
+  -ms-overflow-style: none
+  
+
+  
+  
+  
   
 body
   background-color: $hintergrundfarbe
@@ -16,7 +33,7 @@ body
   padding: 0
   height: 100%
   overflow: hidden
-  -webkit-scrollbar
+  
   
 
 main 
@@ -57,7 +74,7 @@ main
     position: $position-karten
     padding: $padding
     overflow-y: scroll
-    
+
     max-width: 87%
     margin: auto
     margin-top: 10px
