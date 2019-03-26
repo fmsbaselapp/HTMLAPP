@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
-const writeStream = fs.createWriteStream('post.csv');
+const writeStream = fs.createWriteStream('AlleAusfaelle.csv');
 
 //Write Headers
 writeStream.write(`wochentag,ausfall,raum \n`);
