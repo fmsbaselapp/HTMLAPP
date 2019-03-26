@@ -14,14 +14,12 @@ main {
 }
 
 main section#Stundenausfälle {
-  display: block;
   background: #ffffff;
+  position: relative;
   padding: 10px;
   overflow-y: scroll;
-  margin: auto;
   max-width: 87%;
-  position: relative;
-  border-right: 16px;
+  margin: auto;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -43,10 +41,9 @@ main section#Stundenausfälle p {
 
 main section#Stundenplan {
   background: #ffffff;
+  position: relative;
   padding: 10px;
   overflow-y: scroll;
-  margin-bottom: 0px;
-  position: relative;
   max-width: 87%;
   margin: auto;
   margin-top: 10px;
