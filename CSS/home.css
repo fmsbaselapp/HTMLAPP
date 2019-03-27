@@ -54,6 +54,32 @@ main section#Stundenausfälle p {
   font-size: 20px;
 }
 
+main section#Stundenausfälle.alle {
+  background: #000000;
+  position: relative;
+  padding: 10px;
+  overflow-y: scroll;
+  max-width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+main section#Stundenausfälle.alle h1 {
+  font-family: poppins,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+main section#Stundenausfälle.alle p {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
 main section#Stundenplan {
   background: #ffffff;
   position: relative;
