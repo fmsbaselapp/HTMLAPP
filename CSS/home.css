@@ -40,6 +40,10 @@ main section#Stundenausfälle {
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+main section#Stundenausfälle:hover {
+  background: #f2f2f2;
+}
+
 main section#Stundenausfälle h1 {
   font-family: poppins,sans-serif;
   font-weight: 400;
@@ -55,11 +59,12 @@ main section#Stundenausfälle p {
 }
 
 main section#Stundenausfälle.alle {
-  background: #000000;
+  background: #ffffff;
   position: relative;
   padding: 10px;
   overflow-y: scroll;
-  max-width: 50%;
+  height: 430px;
+  max-width: 87%;
   margin: auto;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -92,6 +97,10 @@ main section#Stundenplan {
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+main section#Stundenplan:hover {
+  background: #f2f2f2;
 }
 
 main section#Stundenplan h1 {
