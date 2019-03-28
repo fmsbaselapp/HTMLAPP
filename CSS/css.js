@@ -1,17 +1,13 @@
 var Stundenausfälle = document.getElementById("Stundenausfälle")
 
-Stundenausfälle.onclick = function() {
+Stundenausfälle.onclick = function () {
 
-if(contentScript.className == "alle") {
-//kleiner
-    content.className = "";
- } else {
-//grösser
-    contentScript.className = "alle";
+    if(Stundenausfälle.className == "alle") {
+        //kleiner
+        Stundenausfälle.className = "";
+    } else {
+        //grösser
+        Stundenausfälle.className = "alle";
 
     }
 }
-
-
-
-
