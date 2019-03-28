@@ -4,12 +4,10 @@
 	background-color: transparent
 	-webkit-border-radius: 6px
   
-
 $fontsize_h1: 20px
 $fontsize_ul: 20px
 
 $padding: 10px
-
 
 $position-karten: relative 
 $box-schatten: 0 5px 5px rgba(0,0,0,.2)
@@ -22,26 +20,18 @@ html
   overflow-x: hidden
   -ms-overflow-style: none
   
-
-  
-  
-  
-  
 body
   background-color: $hintergrundfarbe
   margin: 0
   padding: 0
   height: 100%
   overflow: hidden
-  
-  
 
 main 
   margin-top: 66px
   margin-left: auto
   margin-right: auto
 
-  
   section#Stundenausfälle
     background: $hintergrundfarbe-karten
     position: $position-karten
@@ -53,7 +43,10 @@ main
     
     border-radius: 5px
     box-shadow: $box-schatten
-
+    
+    &:hover
+      background: darken($hintergrundfarbe-karten, 5%)
+    
     h1
       font-family: poppins,sans-serif
       font-weight: 400
@@ -67,12 +60,13 @@ main
       font-size: $fontsize_ul
 
   section#Stundenausfälle.alle
-    background: #000000
+    background: $hintergrundfarbe-karten
     position: $position-karten
     padding: $padding
     overflow-y: scroll
 
-    max-width: 50%
+    height: 430px
+    max-width: 87%
     margin: auto
     
     border-radius: 5px
@@ -91,8 +85,6 @@ main
       font-style: normal
       font-size: $fontsize_ul
 
-
-
   section#Stundenplan
     background: $hintergrundfarbe-karten
     position: $position-karten
@@ -107,10 +99,9 @@ main
     border-radius: 5px
     box-shadow: $box-schatten
     
-
+    &:hover
+      background: darken($hintergrundfarbe-karten, 5%)
     
-
-
     h1
       font-family: poppins,sans-serif
       font-weight: 400
