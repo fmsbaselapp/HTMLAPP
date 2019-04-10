@@ -83,13 +83,6 @@ main {
   margin-top: 66px;
   margin-left: auto;
   margin-right: auto;
-  /*
-
-    center bei relative:
-
-     left: 50%
-    -webkit-transform: translateX(-50%)
-    transform: translateX(-50%) */
 }
 
 main section#Stundenausfälle {
@@ -199,5 +192,16 @@ main section#Stundenplan ul {
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
+}
+
+#bm {
+  width: 250px;
+  z-index: 5;
+  /*
+    center bei relative:
+
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    transform: translateX(-50%) */
 }
 /*# sourceMappingURL=home.css.map */

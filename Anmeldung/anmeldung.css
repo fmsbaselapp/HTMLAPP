@@ -1,0 +1,130 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  overflow: hidden;
+  min-width: 300px;
+}
+
+body {
+  background-color: #ECEFF2;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+section#anmeldung-karte {
+  background: #ffffff;
+  position: relative;
+  overflow-y: scroll;
+  height: 75vh;
+  width: 90vw;
+  margin: auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background: #419AEC;
+  color: white;
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+  border: 0;
+  height: 11vh;
+  width: 90vw;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+}
+
+div#edubs-mail-div {
+  text-align: center;
+}
+
+input#edubs-mail {
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: inset 0px 0px 0px 0px red;
+          box-shadow: inset 0px 0px 0px 0px red;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  width: 85%;
+  min-height: 4vh;
+  margin-bottom: 4.2vh;
+}
+
+input#passwort {
+  -webkit-appearance: none !important;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  width: 85%;
+  min-height: 4.2vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: poppins,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 27px;
+  margin-bottom: 0px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+p#anmeldung-untertitel {
+  margin-top: 10px;
+  text-align: center;
+  font-family: poppins,sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  width: 236px;
+  margin: auto;
+  color: #000000;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.p {
+  font-size: 18px;
+  font-family: poppins,sans-serif;
+  color: #000000;
+  margin-left: 6vw;
+  margin-bottom: 10px;
+}
+
+p#registrier-link {
+  position: absolute;
+  font-size: 13px;
+  font-family: poppins,sans-serif;
+  color: rgba(0, 0, 0, 0.36);
+  text-align: center;
+  bottom: 0px;
+  width: 60%;
+  margin-bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+a {
+  font-size: 13px;
+  font-family: poppins,sans-serif;
+  color: rgba(0, 0, 0, 0.36);
+  text-align: center;
+}
+/*# sourceMappingURL=anmeldung.css.map */

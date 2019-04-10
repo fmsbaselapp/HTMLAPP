@@ -1,1 +1,1 @@
-window.alert("Javascript funktioniert!");
+//window.alert("Javascript funktioniert!");
