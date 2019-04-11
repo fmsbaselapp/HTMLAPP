@@ -1,8 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  
 <head>
   <title>ClassmateApp</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
+      authDomain: "classmateapp-72ce9.firebaseapp.com",
+      databaseURL: "https://classmateapp-72ce9.firebaseio.com",
+      projectId: "classmateapp-72ce9",
+      storageBucket: "classmateapp-72ce9.appspot.com",
+      messagingSenderId: "218437580841"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>Classmate</title>
+  <link rel="stylesheet" type="text/css" href="CSS/home.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+  <script src="/StyleJavaScript/css.js" async></script>
 </head>
 <body>
 
@@ -20,23 +46,6 @@
     <button onclick="logout()">Abmelden</button>
   </div>
 
-
-
-
-  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
-      authDomain: "classmateapp-72ce9.firebaseapp.com",
-      databaseURL: "https://classmateapp-72ce9.firebaseio.com",
-      projectId: "classmateapp-72ce9",
-      storageBucket: "classmateapp-72ce9.appspot.com",
-      messagingSenderId: "218437580841"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="index.js"></script>
 
 </body>
 </html>
