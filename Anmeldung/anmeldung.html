@@ -36,12 +36,12 @@
             <p class="p">Edubs E-Mail:</p>
             <div style="text-align:center;">
                 
-                <input id="edubs-mail" placeholder="vorname.nachname" type="text" min="5">
+                <input id="email_field" placeholder="vorname.nachname@stud.edubs.ch" type="email" min="5">
             </div> 
 
              <p class="p">Passwort:</p>
              <div style="text-align:center;">
-                <input id="passwort" placeholder="passwort" type="password">
+                <input id="passwort_field" placeholder="Passwort" type="password">
             </div>
 
             <div id="link">
@@ -57,6 +57,12 @@
         </div>    
     
     </div>
-  
+    <div id="user_div" class="loggedin-div">
+        <h3>Willkommen!</h3>
+        <p id="user_para">Du bist jetzt angemeldet!</p>
+        <button onclick="logout()">Abmelden</button>
+      </div>
+    
+    
 </body>
 </html>

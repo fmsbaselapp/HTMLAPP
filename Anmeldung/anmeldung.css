@@ -47,11 +47,11 @@ button {
   margin-bottom: 5%;
 }
 
-div#edubs-mail-div {
+div#email_field-div {
   text-align: center;
 }
 
-input#edubs-mail {
+input#email_field {
   border: 3px solid #DEE4E7;
   background-color: #DEE4E7;
   -webkit-appearance: none !important;
@@ -65,7 +65,7 @@ input#edubs-mail {
   margin-bottom: 4.2vh;
 }
 
-input#passwort {
+input#passwort_field {
   border: 3px solid #DEE4E7;
   background-color: #DEE4E7;
   -webkit-appearance: none !important;
