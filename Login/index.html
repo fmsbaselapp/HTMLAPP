@@ -1,27 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  
 <head>
   <title>ClassmateApp</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <div id="login_div" class="main-div">
-    <h3>ClassmateApp Login</h3>
-    <input type="email" placeholder="Edubs-Mail..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
-
-    <button onclick="login()">Anmelden</button>
-  </div>
-
-  <div id="user_div" class="loggedin-div">
-    <h3>Willkommen!</h3>
-    <p id="user_para">Du bist jetzt angemeldet!</p>
-    <button onclick="logout()">Abmelden</button>
-  </div>
-
-
-
 
   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
   <script>
@@ -37,6 +20,32 @@
     firebase.initializeApp(config);
   </script>
   <script src="index.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>Classmate</title>
+  <link rel="stylesheet" type="text/css" href="CSS/home.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+  <script src="/StyleJavaScript/css.js" async></script>
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>ClassmateApp Login</h3>
+    <input type="email" placeholder="Edubs-Mail..." id="email_field" required pattern=".+@stud.edubs.ch" size="13"/>
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Anmelden</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Willkommen!</h3>
+    <p id="user_para">Du bist jetzt angemeldet!</p>
+    <button onclick="logout()">Abmelden</button>
+  </div>
+
 
 </body>
 </html>
