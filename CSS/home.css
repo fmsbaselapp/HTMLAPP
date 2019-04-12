@@ -6,7 +6,6 @@
 ::-webkit-scrollbar-track-piece {
   background-color: transparent;
   -webkit-border-radius: 0px;
-  -webkit-border-radius-border-radius: 0px;
 }
 
 @-webkit-keyframes vergrössern {
@@ -103,8 +102,8 @@ section#Stundenausfälle {
 }
 
 section#AlleStundenausfälle {
-  background: #ffffff;
   position: relative;
+  background: #ffffff;
   padding: 10px;
   min-width: 87%;
   max-width: 87%;
