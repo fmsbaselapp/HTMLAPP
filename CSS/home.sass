@@ -1,9 +1,9 @@
 ::-webkit-scrollbar
-	width: 0px
+	scrollbar-width: 0px
+  display: none
 ::-webkit-scrollbar-track-piece
 	background-color: transparent
 	-webkit-border-radius: 0px
-  
 
 //============================================================
 @keyframes vergrössern
@@ -50,8 +50,11 @@ html
   -moz-user-select: none
   user-select: none
 
+
 body
-  scroll-snap-type: mandatory
+  scroll-snap-type: y proximity
+  scroll-padding: -5vh
+  
   overflow-y: scroll
   background-color: $hintergrundfarbe
   margin: 0
@@ -61,7 +64,8 @@ body
 main
   margin-left: auto
   margin-right: auto
-    
+
+  
 
 //section============================================================
 
@@ -70,28 +74,23 @@ section#Stundenausfälle
   position: $position-karten
   padding: $padding
     
-  min-width: 87%
-  max-width: 87%
+  width: 87vw
   margin: auto
-  margin-top: 66px
+  margin-top: 5vh
   border-radius: 15px
 
   box-shadow: $box-schatten
   z-index: 4
   color: black
  
-
   scroll-snap-align: start
-  scroll-margin-top: 66px
 
 section#AlleStundenausfälle
-    
   position: relative //eventueller fehler
   background: $hintergrundfarbe-karten
   padding: $padding
 
-  min-width: 87%
-  max-width: 87%
+  width: 87vw
   margin: auto
   border-radius: 0px 0px 15px 15px
  
@@ -99,28 +98,27 @@ section#AlleStundenausfälle
   z-index: 3
   color: black
  
+  scroll-snap-align: start
 
 section#Stundenplan
-    background: $hintergrundfarbe-karten
-    position: $position-karten
-    padding: $padding
+  background: $hintergrundfarbe-karten
+  position: $position-karten
+  padding: $padding
 
-    min-width: 87%
-    max-width: 87%
-    margin: auto
-    margin-top: 20px
-    margin-bottom: 20px
+  width: 87vw
+  margin: auto
+  margin-top: 20px
+  margin-bottom: 20px 
 
-    border-radius: 15px
-    box-shadow: $box-schatten
-    z-index: 2
-    color: black
- 
-    scroll-snap-align: start
+  border-radius: 15px
+  box-shadow: $box-schatten
+  z-index: 2
+  color: black
 
+  scroll-snap-align: start
+  
 
 //schrift============================================================
-
 
 h1
   font-family: poppins,sans-serif
