@@ -77,49 +77,65 @@ body {
   overflow-y: scroll;
   background-color: #DEE4E7;
   margin: 0;
-  padding: 0;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: calc(100vw - 10vw);
   height: 100%;
-}
-
-main {
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
 }
 
 section#Stundenausfälle {
   background: #ffffff;
   position: relative;
   padding: 10px;
-  width: 87vw;
-  margin: auto;
-  margin-top: 5vh;
   border-radius: 15px;
+  margin: auto;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 4;
   color: black;
   scroll-snap-align: start;
+  position: relative;
 }
 
-section#AlleStundenausfälle {
+section#AlleStundenausfälle.alle {
   position: relative;
-  background: #ffffff;
+  background: #419AEC;
   padding: 10px;
-  width: 87vw;
   margin: auto;
   border-radius: 0px 0px 15px 15px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 3;
-  color: black;
+  color: white;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
   scroll-snap-align: start;
+  position: relative;
+}
+
+section#AlleStundenausfälle {
+  position: relative;
+  background: #419AEC;
+  padding: 10px;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  color: white;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+  scroll-snap-align: start;
+  position: relative;
 }
 
 section#Stundenplan {
   background: #ffffff;
   position: relative;
   padding: 10px;
-  width: 87vw;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -129,6 +145,13 @@ section#Stundenplan {
   z-index: 2;
   color: black;
   scroll-snap-align: start;
+  position: relative;
+}
+
+.Dunkler {
+  padding: 1vw;
+  background: #3780C4;
+  border-radius: 15px;
 }
 
 h1 {
@@ -168,8 +191,7 @@ section#Stundenplan:hover {
   transition: 0.5s;
 }
 
-section#AlleStundenausfälle {
-  background: #fafafa;
+section#AlleStundenausfälle:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

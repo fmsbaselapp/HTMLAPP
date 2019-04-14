@@ -58,14 +58,15 @@ body
   overflow-y: scroll
   background-color: $hintergrundfarbe
   margin: 0
-  padding: 0
-  height: 100%
-
-main
-  margin-left: auto
-  margin-right: auto
-
+  padding-top: 5vh
+  padding-bottom: 5vh
+  padding-left: 5vw
+  padding-right: 5vw
   
+  
+  width: calc(100vw - 10vw)
+  height: 100%
+  position: absolute
 
 //section============================================================
 
@@ -74,38 +75,59 @@ section#Stundenausfälle
   position: $position-karten
   padding: $padding
     
-  width: 87vw
-  margin: auto
-  margin-top: 5vh
   border-radius: 15px
 
+  margin: auto
+  
   box-shadow: $box-schatten
   z-index: 4
   color: black
  
   scroll-snap-align: start
 
-section#AlleStundenausfälle
+  position: relative
+
+section#AlleStundenausfälle.alle
   position: relative //eventueller fehler
-  background: $hintergrundfarbe-karten
+  background: #419AEC
   padding: $padding
 
-  width: 87vw
   margin: auto
   border-radius: 0px 0px 15px 15px
  
   box-shadow: $box-schatten
   z-index: 3
-  color: black
- 
+  color: white
+
+
+  transform: translate(0, -20px)
   scroll-snap-align: start
+  position: relative
+
+section#AlleStundenausfälle
+  position: relative //eventueller fehler
+  background: #419AEC
+  padding: $padding
+
+  margin: auto
+  border-radius: 0px 0px 15px 15px
+ 
+  box-shadow: $box-schatten
+  z-index: 3
+  color: white
+
+
+  transform: translate(0, -20px)
+  scroll-snap-align: start
+  position: relative
+
+
 
 section#Stundenplan
   background: $hintergrundfarbe-karten
   position: $position-karten
   padding: $padding
 
-  width: 87vw
   margin: auto
   margin-top: 20px
   margin-bottom: 20px 
@@ -116,6 +138,15 @@ section#Stundenplan
   color: black
 
   scroll-snap-align: start
+
+  position: relative
+
+
+.Dunkler
+  padding: 1vw
+  background: #3780C4
+  border-radius: 15px
+
   
 
 //schrift============================================================
@@ -150,8 +181,7 @@ section#Stundenplan:hover
   transform: $transform-hover
   transition: $transition-hover
 
-section#AlleStundenausfälle
-  background: $hover-farbe
+section#AlleStundenausfälle:hover
   transition: $transition-hover
 
 //============================================================
