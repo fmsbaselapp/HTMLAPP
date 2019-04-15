@@ -1,8 +1,9 @@
 ::-webkit-scrollbar
-	width: 0px
+	scrollbar-width: 0px
+  display: none
 ::-webkit-scrollbar-track-piece
 	background-color: transparent
-	-webkit-border-radius: 6px
+	-webkit-border-radius: 0px
 
 //============================================================
 @keyframes vergrössern
@@ -44,142 +45,146 @@ $hintergrundfarbe: #DEE4E7
 //============================================================
 
 html
-  overflow: scroll
-  overflow-x: hidden
   -ms-overflow-style: none
-
   -webkit-user-select: none
   -moz-user-select: none
   user-select: none
-  
 
-  
+
 body
+  scroll-snap-type: y proximity
+  scroll-padding: -5vh
+  
+  overflow-y: scroll
   background-color: $hintergrundfarbe
   margin: 0
-  padding: 0
+  padding-top: 5vh
+  padding-bottom: 5vh
+  padding-left: 5vw
+  padding-right: 5vw
+  
+  
+  width: calc(100vw - 10vw)
   height: 100%
-  overflow: hidden
+  position: absolute
 
-main 
-  margin-top: 66px
-  margin-left: auto
-  margin-right: auto
+//section============================================================
 
-  section#Stundenausfälle
-    background: $hintergrundfarbe-karten
-    position: $position-karten
-    padding: $padding
-    overflow-y: scroll
-
-    min-width: 87%
-    max-width: 87%
-    margin: auto
+section#Stundenausfälle
+  background: $hintergrundfarbe-karten
+  position: $position-karten
+  padding: $padding
     
-    border-radius: 5px
-    box-shadow: $box-schatten
-    z-index: 4
+  border-radius: 15px
 
-    
-
-    &:hover
-      background: $hover-farbe
-      transform: $transform-hover
-      transition: $transition-hover
-   
-    
-    h1
-      font-family: poppins,sans-serif
-      font-weight: 400
-      font-style: normal
-      font-size: $fontsize_h1
-       
-    p
-      font-family: poppins, sans-serif
-      font-weight: 700
-      font-style: normal
-      font-size: $fontsize_ul
-
-  section#AlleStundenausfälle
-    background: $hintergrundfarbe-karten
-    position: relative
-    padding: $padding
-    overflow-y: scroll
-    
-    margin-bottom: 10px
-    min-width: 87%
-    max-width: 87%
-    margin: auto
-
-    
-
-    border-radius: 0px 0px 5px 5px
-    box-shadow: $box-schatten
-    z-index: 3
-
-    
-    
-    
-    &:hover
-      background: $hover-farbe
-      transition: $transition-hover
-     
-
-    
-    h1
-      font-family: poppins,sans-serif
-      font-weight: 400
-      font-style: normal
-      font-size: $fontsize_h1
-       
-    p
-      font-family: poppins, sans-serif
-      font-weight: 700
-      font-style: normal
-      font-size: $fontsize_ul
+  margin: auto
   
-  
+  box-shadow: $box-schatten
+  z-index: 4
+  color: black
  
-    
+  scroll-snap-align: start
+
+  position: relative
+
+section#AlleStundenausfälle.alle
+  position: relative //eventueller fehler
+  background: #419AEC
+  padding: $padding
+
+  margin: auto
+  border-radius: 0px 0px 15px 15px
+ 
+  box-shadow: $box-schatten
+  z-index: 3
+  color: white
 
 
-  section#Stundenplan
-    background: $hintergrundfarbe-karten
-    position: $position-karten
-    padding: $padding
-    overflow-y: scroll
+  transform: translate(0, -20px)
+  scroll-snap-align: start
+  position: relative
 
-    min-width: 87%
-    max-width: 87%
-    margin: auto
-    margin-top: 10px
-    margin-bottom: 10px
+section#AlleStundenausfälle
+  position: relative //eventueller fehler
+  background: #419AEC
+  padding: $padding
 
-    border-radius: 5px
-    box-shadow: $box-schatten
-    z-index: 2
-    
-
-    
-    &:hover
-      background: $hover-farbe
-      transform: $transform-hover
-      transition: $transition-hover
-      
-    
-    h1
-      font-family: poppins,sans-serif
-      font-weight: 400
-      font-style: normal
-      font-size: $fontsize_h1
-      
-    ul
-      font-family: poppins, sans-serif
-      font-weight: 700
-      font-style: normal
-      font-size: $fontsize_ul
+  margin: auto
+  border-radius: 0px 0px 15px 15px
+ 
+  box-shadow: $box-schatten
+  z-index: 3
+  color: white
 
 
+  transform: translate(0, -20px)
+  scroll-snap-align: start
+  position: relative
+
+
+
+section#Stundenplan
+  background: $hintergrundfarbe-karten
+  position: $position-karten
+  padding: $padding
+
+  margin: auto
+  margin-top: 20px
+  margin-bottom: 20px 
+
+  border-radius: 15px
+  box-shadow: $box-schatten
+  z-index: 2
+  color: black
+
+  scroll-snap-align: start
+
+  position: relative
+
+
+.Dunkler
+  padding: 1vw
+  background: #3780C4
+  border-radius: 15px
+
+  
+
+//schrift============================================================
+
+h1
+  font-family: poppins,sans-serif
+  font-weight: 400
+  font-style: normal
+  font-size: $fontsize_h1
+
+ul
+  font-family: poppins, sans-serif
+  font-weight: 700
+  font-style: normal
+  font-size: $fontsize_ul
+
+p
+  font-family: poppins, sans-serif
+  font-weight: 700
+  font-style: normal
+  font-size: $fontsize_ul
+
+
+//hover============================================================
+section#Stundenausfälle:hover
+  background: $hover-farbe
+  transform: $transform-hover
+  transition: $transition-hover
+
+section#Stundenplan:hover
+  background: $hover-farbe
+  transform: $transform-hover
+  transition: $transition-hover
+
+section#AlleStundenausfälle:hover
+  transition: $transition-hover
+
+//============================================================
 #bm
   width: 250px
   z-index: 5

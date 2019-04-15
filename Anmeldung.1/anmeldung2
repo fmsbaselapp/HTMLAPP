@@ -32,33 +32,30 @@
             <h1>Anmeldung</h1>
             <p id="anmeldung-untertitel">Melde dich mit deiner Edubs E-Mail<br>
             und deinem Passwort an.</p>
-            
-       
+
              <!--Email Input-->
-            <p class="p">Edubs E-Mail:</p>
-            <div id="email_field" style="text-align:center;">
+            <div id="login_div" class="main-div"> </div>
+                <p class="p">Edubs E-Mail:</p>
+            
                   <input id="email_field" placeholder="vorname.nachname@stud.edubs.ch" type="email" min="5">
-            </div> 
 
-             <!--Passwort Input-->
-             <p class="p">Passwort:</p> 
-             <div id="password_field" style="text-align:center;">
-                <input id="passwort_field" placeholder="Passwort" type="password">
+                <!--Passwort Input-->
+                <p class="p">Passwort:</p> 
+             
+                        <input id="passwort_field" placeholder="Passwort" type="password">
+                    <!--Anmelde Button-->
+                  <button onclick="login()">Anmeldung </button> 
+                </div>
+                 <!--Hier gehts zur Registrierung-->
+                <div id="link">
+                 <p id="registrier-link"><a href="Registrierung">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</a></p>
             </div>
-
-             <!--Hier gehts zur Registrierung-->
-            
-            <p id="registrier-link" href="Registrierung">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</p>
-            
-          </section>
-        </div>
-
-           
+       
+        </div> <!--section-->
+        </section>    
         
          <!--Anmelde Button-->
-        <div id="button" style="text-align:center;">
-            <button onclick="login()">Anmeldung </button> 
-        </div>    
+     
     
     </div>
   </div>
@@ -66,7 +63,7 @@
         <h3>Willkommen!</h3>
         <p id="user_para">Du bist jetzt angemeldet!</p>
         <button onclick="logout()">Abmelden</button>
-  </div>
+      </div>
 
     
     

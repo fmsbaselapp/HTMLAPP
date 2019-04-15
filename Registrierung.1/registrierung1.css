@@ -13,14 +13,17 @@ html {
 
 body {
   background-color: #ECEFF2;
-  margin: 0;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   overflow: visible;
 }
 
 section#inputs {
-  margin-top: 5vh;
-  margin-bottom: 10vh;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
 }
 
 section#registrierung-karte {
@@ -51,7 +54,8 @@ input#email_field {
   padding-right: 10px;
   width: 75vw;
   min-height: 4vh;
-  margin-bottom: 2.1vh;
+  min-height: 4.2vh;
+  margin-bottom: 0;
 }
 
 input#passwort_field {
@@ -63,7 +67,7 @@ input#passwort_field {
   padding-right: 10px;
   width: 75vw;
   min-height: 4.2vh;
-  margin-bottom: 2.1vh;
+  margin-bottom: 0vh;
 }
 
 input#passwort_field_bestätigen {
@@ -75,7 +79,6 @@ input#passwort_field_bestätigen {
   padding-right: 10px;
   width: 75vw;
   min-height: 4.2vh;
-  margin-bottom: 2.1vh;
 }
 
 button {
@@ -87,11 +90,11 @@ button {
   border: 0;
   height: 13vh;
   width: 90vw;
-  border-radius: 15px;
+  border-radius: 50vw;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   font-size: 25px;
-  margin-bottom: 5vh;
+  margin-bottom: 0vh;
 }
 
 h1 {
@@ -100,52 +103,42 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: 10vw;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   color: #000000;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 p#registrierung-untertitel {
-  margin-top: 10px;
+  margin-top: 1vh;
   text-align: center;
   font-family: poppins,sans-serif;
   font-style: normal;
-  font-size: 3vw;
+  font-size: 2vh;
   max-width: 60vw;
   margin: auto;
   color: #000000;
   margin-top: 1vh;
-  margin-bottom: 40px;
+  margin-bottom: 0vh;
 }
 
 .p {
-  font-size: 18px;
+  font-size: 3vh;
   font-family: poppins,sans-serif;
   color: #000000;
   margin-left: 7vw;
   margin-right: 7vw;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
 }
 
 p#anmelde-link {
-  position: absolute;
-  font-size: 13px;
+  margin: auto;
+  font-size: 2vh;
   font-family: poppins,sans-serif;
   color: rgba(0, 0, 0, 0.36);
   text-align: center;
-  bottom: 0px;
-  width: 60%;
-  margin-bottom: 4vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-a {
-  font-size: 13px;
-  font-family: poppins,sans-serif;
-  color: rgba(0, 0, 0, 0.36);
-  text-align: center;
+  max-width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
 }
 
 h3 {
@@ -155,4 +148,4 @@ h3 {
 div#user_div {
   text-align: center;
 }
-/*# sourceMappingURL=registrierung.css.map */
+/*# sourceMappingURL=registrierung1.css.map */

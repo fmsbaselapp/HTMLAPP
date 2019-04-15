@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registrierung</title>
-    <link rel="stylesheet" href="registrierung.css">
+    <title>Anmeldung</title>
+    <link rel="stylesheet" href="anmeldung.css">
     <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
@@ -22,49 +22,41 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="registrierung.js"></script>
+    <script src="anmeldung.js"></script>
 
 </head>
 <body>
- 
     <div id="section">
-            <section id="registrierung-karte">
+            <section id="anmeldung-karte">
              <!--Titel-->
-            <h1>Registrierung</h1>
-            <p id="registrierung-untertitel">Registriere dich mit deiner Edubs E-Mail<br>
-            und erstelle ein Passwort.</p>
-            
-            <section id="inputs">
+            <h1>Anmeldung</h1>
+            <p id="anmeldung-untertitel">Melde dich mit deiner Edubs E-Mail<br>
+            und deinem Passwort an.</p>
+
              <!--Email Input-->
-            <p class="p">Deine Edubs E-Mail:</p>
+            <p class="p">Edubs E-Mail:</p>
             <div id="email_field" style="text-align:center;">
                   <input id="email_field" placeholder="vorname.nachname@stud.edubs.ch" type="email" min="5">
             </div> 
 
              <!--Passwort Input-->
-             <p class="p">Neues Passwort:</p> 
+             <p class="p">Passwort:</p> 
              <div id="password_field" style="text-align:center;">
-                <input id="passwort_field" placeholder="Neues Passwort" type="password">
+                <input id="passwort_field" placeholder="Passwort" type="password">
             </div>
-
-              <!--Passwort bestätigen Input-->
-              <p class="p">Passwort bestätigen:</p> 
-              <div id="password_field_bestätigen" style="text-align:center;">
-                 <input id="passwort_field_bestätigen" placeholder="Passwort bestätigen" type="password">
-             </div>
 
              <!--Hier gehts zur Registrierung-->
             <div id="link">
-            <p id="anmelde-link"><a href="Anmeldung">Du hast schon ein Konto?<br>Melde dich hier an.</a></p>
+            <p id="registrier-link"><a href="Registrierung">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</a></p>
             </div>
-          </section>
+       
         </div>
 
-           
+        </section>    
         
          <!--Anmelde Button-->
         <div style="text-align:center;">
-            <button onclick="login()">Registrierung </button> 
+            <button onclick="login()">Anmeldung </button> 
         </div>    
     
     </div>
@@ -76,6 +68,6 @@
       </div>
 
     
-
+    
 </body>
 </html>

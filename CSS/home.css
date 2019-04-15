@@ -1,11 +1,12 @@
 @charset "UTF-8";
 ::-webkit-scrollbar {
-  width: 0px;
+  scrollbar-width: 0px;
+  scrollbar-width-display: none;
 }
 
 ::-webkit-scrollbar-track-piece {
   background-color: transparent;
-  -webkit-border-radius: 6px;
+  -webkit-border-radius: 0px;
 }
 
 @-webkit-keyframes vergrössern {
@@ -62,8 +63,6 @@
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
   -ms-overflow-style: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -72,107 +71,111 @@ html {
 }
 
 body {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  scroll-padding: -5vh;
+  overflow-y: scroll;
   background-color: #DEE4E7;
   margin: 0;
-  padding: 0;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: calc(100vw - 10vw);
   height: 100%;
-  overflow: hidden;
+  position: absolute;
 }
 
-main {
-  margin-top: 66px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main section#Stundenausfälle {
+section#Stundenausfälle {
   background: #ffffff;
   position: relative;
   padding: 10px;
-  overflow-y: scroll;
-  min-width: 87%;
-  max-width: 87%;
+  border-radius: 15px;
   margin: auto;
-  border-radius: 5px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 4;
-}
-
-main section#Stundenausfälle:hover {
-  background: #fafafa;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-main section#Stundenausfälle h1 {
-  font-family: poppins,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-}
-
-main section#Stundenausfälle p {
-  font-family: poppins, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-}
-
-main section#AlleStundenausfälle {
-  background: #ffffff;
+  color: black;
+  scroll-snap-align: start;
   position: relative;
+}
+
+section#AlleStundenausfälle.alle {
+  position: relative;
+  background: #419AEC;
   padding: 10px;
-  overflow-y: scroll;
-  margin-bottom: 10px;
-  min-width: 87%;
-  max-width: 87%;
   margin: auto;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 15px 15px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 3;
+  color: white;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+  scroll-snap-align: start;
+  position: relative;
 }
 
-main section#AlleStundenausfälle:hover {
-  background: #fafafa;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+section#AlleStundenausfälle {
+  position: relative;
+  background: #419AEC;
+  padding: 10px;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  color: white;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+  scroll-snap-align: start;
+  position: relative;
 }
 
-main section#AlleStundenausfälle h1 {
+section#Stundenplan {
+  background: #ffffff;
+  position: relative;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  color: black;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.Dunkler {
+  padding: 1vw;
+  background: #3780C4;
+  border-radius: 15px;
+}
+
+h1 {
   font-family: poppins,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
 }
 
-main section#AlleStundenausfälle p {
+ul {
   font-family: poppins, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
 }
 
-main section#Stundenplan {
-  background: #ffffff;
-  position: relative;
-  padding: 10px;
-  overflow-y: scroll;
-  min-width: 87%;
-  max-width: 87%;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+p {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
 }
 
-main section#Stundenplan:hover {
+section#Stundenausfälle:hover {
   background: #fafafa;
   -webkit-transform: scale(1.005);
           transform: scale(1.005);
@@ -180,18 +183,17 @@ main section#Stundenplan:hover {
   transition: 0.5s;
 }
 
-main section#Stundenplan h1 {
-  font-family: poppins,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
+section#Stundenplan:hover {
+  background: #fafafa;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-main section#Stundenplan ul {
-  font-family: poppins, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
+section#AlleStundenausfälle:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #bm {
