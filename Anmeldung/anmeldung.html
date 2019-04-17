@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
@@ -12,9 +12,9 @@
 </head>
 
 
-<body>
+<body scroll="no">
+  
 
-  <div id="section">
     <section id="anmeldung-karte">
       <!--Titel-->
       <h1>Anmeldung</h1>
@@ -34,11 +34,12 @@
       </div>
 
       <!--Hier gehts zur Registrierung-->
-    <p id="registrier-link" href="Registrierung">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</p>
+
+        <p><a href="https://classmateapp.online/index.html">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</a></p>
 
     </section>
 
-  </div>
+
 
   <div id="button" style="text-align:center;">
       <button onclick="login()">Anmelden</button>
@@ -64,7 +65,7 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="index.js"></script>
+  <script src="anmeldung.js"></script>
 
 </body>
 
