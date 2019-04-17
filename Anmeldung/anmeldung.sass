@@ -27,103 +27,109 @@ html
   -webkit-user-select: none
   -moz-user-select: none
   user-select: none
-  overflow: hidden
-  min-width: 300px
+  position: relative
+
+
+
 
 body
-  display: block
   background-color: $hintergrundfarbe
+  overflow: visible
+  position: relative
+  display: flex
+  flex-direction: column
+  height: calc(100vh - 10vh)
+  margin: 0
+  margin-bottom: 5vh
   padding-top: 5vh
-  padding-bottom: 5vh
   padding-left: 5vw
   padding-right: 5vw
-  margin: 0
   
-  overflow: visible
-  
+
 //============================================================
 
-
-
-  
-
-section#anmeldung-karte
-  background: $hintergrundfarbe-karten
+div#section
+  height: 100%
   position: relative
+  vertical-align: middle
+  display: table-cell
+  min-height: 70vh
+  
+section#anmeldung-karte
+  background-color: $hintergrundfarbe-karten
   overflow-y: scroll
-
+  margin: 0
+  border-radius: 15px
+  box-shadow: $box-schatten
+  width: 80vw
   padding-top: 5vh
   padding-bottom: 5vh
   padding-right: 5vw
   padding-left: 5vw
-
-  margin: auto
-   //desktop
-  //mobile margin-top: 10px
-
-  border-radius: 15px
-  box-shadow: $box-schatten
+  position: absolute
+  display: table
+  height: 100%
 
 
-div#email_field-div
-  text-align: center
-  width: 100%
-  
 
 input#email_field
-  //border: 3px solid #54C17C
-  border: 3px solid #DEE4E7
-  //background-color: #ffffff
   background-color: #DEE4E7
+  border: 3px solid #DEE4E7
   -webkit-appearance:none!important
   box-shadow: inset 0px 0px 0px 0px red
   border-radius: 15px
+
   padding-left: 10px
   padding-right: 10px
   
-  width: 90%
-
-  min-height: 4.2vh
-  margin-bottom: 0
+  position: relative
+  width: 72vw
+  min-height: 4vh
   
   
 
-input#passwort_field
-  
-  //border: 3px solid #54C17C
-  border: 3px solid #DEE4E7
-  //background-color: #ffffff
+input#password_field
   background-color: #DEE4E7
+  border: 3px solid #DEE4E7
   -webkit-appearance:none!important
+  box-shadow: inset 0px 0px 0px 0px red
   border-radius: 15px
+
   padding-left: 10px
   padding-right: 10px
-  width: 90%
-  min-height: 4.2vh
-  margin-bottom: 0vh
+  
+  position: relative
+  width: 72vw
+  min-height: 4vh
  
 
 div#button
   height: 100%
-
+  position: relative
+  vertical-align: middle
+  
 button
   background: #419AEC
   color: white
   position: relative
   padding: $padding
   
-  display: inline-block
-  
   border: 0
 
   height: 13vh
-  width: 90vw
- 
+  width: 100%
+
+  margin-bottom: 5vh
+  
+  top: 25%
+  position: absolute
+
   border-radius: 50vw
   box-shadow: $box-schatten
   font-size: 25px
-
-
+  left: 50%
+  -webkit-transform: translateX(-50%)
+  transform: translateX(-50%)
 
 
 //schrift=============================================
@@ -133,7 +139,7 @@ h1
   font-family: poppins,sans-serif
   font-weight: 600
   font-style: normal
-  font-size: $fontsize_h1
+  font-size: 10vw
   margin-bottom: 0
   color: #000000
   margin-top: 0
@@ -143,32 +149,32 @@ p#anmeldung-untertitel
   text-align: center
   font-family: poppins,sans-serif
   font-style: normal
-  font-size: 2vh
+  font-size: 3vw
   max-width: 60vw
   margin: auto
   color: #000000
-  margin-top: 1vh 
-  margin-bottom: 0vh
+  margin-top: 0
+  margin-bottom: 3vh
   
 
 .p
-  font-size: 3vh
+  font-size: 4vw
   font-family: poppins,sans-serif
   color: #000000
-  margin-left: 7vw
+  margin-left: 4vw
   margin-right: 7vw
   margin-bottom: 1vh
 
 
 p#registrier-link
   margin: auto
-  font-size: 2vh
+  font-size: 3vw
   font-family: poppins,sans-serif
   color: rgba(0, 0, 0, 0.36)
   text-align: center
   max-width: 100vw
-  margin-top: 30%
-  margin-bottom: 1vh
+  margin-top: 65%
+  margin-bottom: 0vh
 
   
  
