@@ -10,22 +10,12 @@
     <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
-        authDomain: "classmateapp-72ce9.firebaseapp.com",
-        databaseURL: "https://classmateapp-72ce9.firebaseio.com",
-        projectId: "classmateapp-72ce9",
-        storageBucket: "classmateapp-72ce9.appspot.com",
-        messagingSenderId: "218437580841"
-      };
-      firebase.initializeApp(config);
-    </script>
+    
     <script src="anmeldung.js"></script>
 
 </head>
 <body>
+
     <div id="section">
             <section id="anmeldung-karte">
              <!--Titel-->
@@ -46,22 +36,24 @@
                 <input id="passwort_field" placeholder="Passwort" type="password">
             </div>
 
+            <div id="button" style="text-align:center;">
+              <button id="btnLogin" class="btn-action"></button> 
+          </div>    
+    
+
              <!--Hier gehts zur Registrierung-->
             
             <p id="registrier-link" href="Registrierung">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</p>
             
+          
+      </div>    
+
           </section>
         </div>
 
-           
-        
-         <!--Anmelde Button-->
-        <div id="button" style="text-align:center;">
-            <button onclick="login()">Anmeldung </button> 
-        </div>    
-    
     </div>
   </div>
+
     <div id="user_div" class="loggedin-div">
         <h3>Willkommen!</h3>
         <p id="user_para">Du bist jetzt angemeldet!</p>

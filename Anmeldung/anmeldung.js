@@ -1,46 +1,40 @@
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
+(function() {
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
+    authDomain: "classmateapp-72ce9.firebaseapp.com",
+    databaseURL: "https://classmateapp-72ce9.firebaseio.com",
+    projectId: "classmateapp-72ce9",
+    storageBucket: "classmateapp-72ce9.appspot.com",
+    messagingSenderId: "218437580841"
+  };
+  firebase.initializeApp(config);
+
+//Get elements
+const email_field = document.getElementById('email_field')
+const password_field = document.getElementById('password_field')
+const btnLogin = document.getElementById('btnLogin')
+
+//Login
+btnLogin.addEventListener('click', e => {
+  //Get email and password
+  const email = email_field.value;
+  const password = password_field.value
+  const auth = firebase.auth();
   
-      document.getElementById("user_div").style.display = "block";
-      document.getElementById("login_div").style.display = "none";
-  
-      var user = firebase.auth().currentUser;
-  
-      if(user != null){
-  
-        var email_id = user.email;
-        document.getElementById("user_para").innerHTML = "Du bist angemeldet: " + email_id;
-  
-      }
-  
-    } else {
-      // No user is signed in.
-  
-      document.getElementById("user_div").style.display = "none";
-      document.getElementById("login_div").style.display = "block";
-  
-    }
-  });
-  
-  function login(){
-  
-    var userEmail = document.getElementById("email_field").value;
-    var userPass = document.getElementById("password_field").value;
-  
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-  
-      window.alert("Error : " + errorMessage);
-  
-      // ...
-    });
-  
+  //Sing in
+  const promise = auth.singInWithEmailAndPassword(email, password);
+  promise.catch(e => console.log(e.message));
+
+
+});
+//Add a realtime listener
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if(firebaseuser) {
+    console.log(firebaseuser);
+  } else {
+    console.log('nicht angemeldet')
   }
-  
-  function logout(){
-    firebase.auth().signOut();
-  }
-  
+});
+
+});
