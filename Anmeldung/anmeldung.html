@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
-  <link rel="stylesheet" href="anmeldung.css">
+  <link rel="stylesheet" href="src/anmeldung.css">
   <title>Anmeldung</title>
 </head>
 
@@ -40,13 +40,13 @@
     </section>
 
 
-
+   <!--Registrier Button-->
   <div id="button" style="text-align:center;">
       <button onclick="login()">Anmelden</button>
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h3>Willkomen</h3>
+    <h3>Willkommen!</h3>
     <p id="user_para">Du bist angemeldet!</p>
     <button onclick="logout()">Abmelden</button>
   </div>
@@ -65,7 +65,7 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="Anmeldung/anmeldung.js"></script>
+  <script src="Anmeldung/src/anmeldung.js"></script>
 
 </body>
 

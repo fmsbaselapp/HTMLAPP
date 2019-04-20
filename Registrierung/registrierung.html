@@ -2,12 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registrierung</title>
-    <link rel="stylesheet" href="registrierung.css">
-    <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/Registrierung/src/registrierung.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+  <title>Registrierung</title>
+</head>
+
+
+<body scroll="no">
+
+
+  <section id="registrierung-karte">
+    <!--Titel-->
+    <h1>Registrierung</h1>
+    <p id="registrierung-untertitel">Registriere dich mit deiner Edubs E-Mail<br>
+      und erstelle ein Passwort.</p>
+
+      <!--Email Input-->
+      <p class="p">Deine Edubs E-Mail:</p>
+      <div id="login_div" class="main-div" style="text-align:center;">
+        <input type="email" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" />
+      </div>
+
+      <!--Passwort Input-->
+      <p class="p">Neues Passwort:</p>
+      <div id="login_div" class="main-div" style="text-align:center;">
+        <input type="password" placeholder="Passwort" id="password_field" />
+      </div>
+
+      <!--Passwort bestätigen Input-->
+      <p class="p">Passwort bestätigen:</p>
+      <div id="password_field_bestätigen" style="text-align:center;">
+        <input id="passwort_field_bestätigen" placeholder="Passwort bestätigen" type="password">
+      </div>
+
+      <!--Hier gehts zur Registrierung-->
+      <p><a href="../Anmeldung/anmeldung.html">Du hast schon ein Konto?<br>Melde dich hier an.</a></p>
+     
+
+    </section>
+
+
+    <!--Registrier Button-->
+    <div id="button" style="text-align:center;">
+      <button onclick="login()">Registrierung</button>
+  </div>
+
+    <div id="user_div" class="loggedin-div">
+      <h3>Willkommen!</h3>
+      <p id="user_para">Du bist jetzt registriert!</p>
+      <button onclick="logout()">Abmelden</button>
+    </div>
+
 
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
     <script>
@@ -22,60 +70,9 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="registrierung.js"></script>
+    <script src="/Registrierung/src/registrierung.js"></script>
 
-</head>
-<body>
- 
-    <div id="section">
-            <section id="registrierung-karte">
-             <!--Titel-->
-            <h1>Registrierung</h1>
-            <p id="registrierung-untertitel">Registriere dich mit deiner Edubs E-Mail<br>
-            und erstelle ein Passwort.</p>
-            
-            <section id="inputs">
-             <!--Email Input-->
-            <p class="p">Deine Edubs E-Mail:</p>
-            <div id="email_field" style="text-align:center;">
-                  <input id="email_field" placeholder="vorname.nachname@stud.edubs.ch" type="email" min="5">
-            </div> 
-
-             <!--Passwort Input-->
-             <p class="p">Neues Passwort:</p> 
-             <div id="password_field" style="text-align:center;">
-                <input id="passwort_field" placeholder="Neues Passwort" type="password">
-            </div>
-
-              <!--Passwort bestätigen Input-->
-              <p class="p">Passwort bestätigen:</p> 
-              <div id="password_field_bestätigen" style="text-align:center;">
-                 <input id="passwort_field_bestätigen" placeholder="Passwort bestätigen" type="password">
-             </div>
-
-             <!--Hier gehts zur Registrierung-->
-            
-            <p id="anmelde-link" href="index">Du hast schon ein Konto?<br>Melde dich hier an.</p>
-            
-          </section>
-        </div>
-
-           
-        
-         <!--Anmelde Button-->
-        <div style="text-align:center;">
-            <button onclick="login()">Registrierung </button> 
-        </div>    
-    
-    </div>
-  </div>
-    <div id="user_div" class="loggedin-div">
-        <h3>Willkommen!</h3>
-        <p id="user_para">Du bist jetzt angemeldet!</p>
-        <button onclick="logout()">Abmelden</button>
-      </div>
-
-    
 
 </body>
+
 </html>
