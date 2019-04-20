@@ -51,6 +51,7 @@ input#email_field {
   padding-right: 10px;
   width: 72vw;
   min-height: 4vh;
+  font-size: 3.5vw !important;
 }
 
 input#password_field {
@@ -64,6 +65,7 @@ input#password_field {
   padding-right: 10px;
   width: 72vw;
   min-height: 4vh;
+  font-size: 3.5vw !important;
 }
 
 input#passwort_field_bestätigen {
@@ -77,6 +79,7 @@ input#passwort_field_bestätigen {
   padding-right: 10px;
   width: 72vw;
   min-height: 4vh;
+  font-size: 3.5vw !important;
 }
 
 div#button {
@@ -96,6 +99,9 @@ button {
   border-radius: 50vw;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: poppins,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 25px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -117,8 +123,8 @@ p#registrierung-untertitel {
   text-align: center;
   font-family: poppins,sans-serif;
   font-style: normal;
-  font-size: 3vw;
-  max-width: 60vw;
+  font-size: 3.5vw;
+  max-width: 70vw;
   margin: auto;
   color: #000000;
   margin-top: 0;
@@ -126,7 +132,7 @@ p#registrierung-untertitel {
 }
 
 .p {
-  font-size: 4vw;
+  font-size: 5vw;
   font-family: poppins,sans-serif;
   color: #000000;
   margin-left: 4vw;
@@ -136,7 +142,7 @@ p#registrierung-untertitel {
 
 a {
   margin: auto;
-  font-size: 3vw;
+  font-size: 3.5vw;
   font-family: poppins,sans-serif;
   color: rgba(0, 0, 0, 0.36);
   text-align: center;
@@ -154,17 +160,5 @@ h3 {
 
 div#user_div {
   text-align: center;
-}
-
-input[type="email"].big-dog::-webkit-input-placeholder {
-  font-size: 4vw;
-}
-
-input[type="password"].big-dog::-webkit-input-placeholder {
-  font-size: 4vw;
-}
-
-::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-  font-size: 4vw;
 }
 /*# sourceMappingURL=registrierung.css.map */

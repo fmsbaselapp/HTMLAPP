@@ -50,6 +50,7 @@ input#email_field {
   padding-right: 10px;
   width: 72vw;
   min-height: 4vh;
+  font-size: 3.5vw !important;
 }
 
 input#password_field {
@@ -63,6 +64,7 @@ input#password_field {
   padding-right: 10px;
   width: 72vw;
   min-height: 4vh;
+  font-size: 3.5vw !important;
 }
 
 div#button {
@@ -82,6 +84,9 @@ button {
   border-radius: 50vw;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: poppins,sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 25px;
   left: 50%;
   -webkit-transform: translateX(-50%);
