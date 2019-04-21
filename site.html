@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
+            authDomain: "classmateapp-72ce9.firebaseapp.com",
+            databaseURL: "https://classmateapp-72ce9.firebaseio.com",
+            projectId: "classmateapp-72ce9",
+            storageBucket: "",
+            messagingSenderId: "218437580841"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="Site/src/site.js"></script>
+    <script src="Site/src/CSS/css.js" type="text/javascript"></script>
+
+
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Classmate</title>
+    <link rel="stylesheet" href="Site/src/CSS/home.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+    
+
+</head>
+
+<body>
+        <!--Sectionen-->
+        <div class="margin-stundenausfälle"></div>
+        <section id="Stundenausfälle">
+            <h1>Stundenausfälle</h1>
+            <p>keine Stundenausfälle</p>
+        </section>
+        
+
+        <section id="AlleStundenausfälle">
+
+            <h2>Heute:</h2>
+
+            <section class="Dunkler">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>4b: </strong>
+                    13:20-14:55
+                    - D
+                </div>
+                <div class="panel-body">
+                    Arbeitsauftrag zu Hause (neuer Auftrag via Klassenchat)
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>5ci Damen: </strong>
+                    12:30-14:05
+                    - SpM
+                </div>
+                <div class="panel-body">
+                    L. Engler
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>6i: </strong>
+                    13:20-14:55
+                    - D
+                </div>
+                <div class="panel-body">
+                    Arbeitsauftrag zu Hause
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+        </section>
+
+
+            <h3>Donnerstag:</h3>
+
+            <section class="Dunkler">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>1b: </strong>
+                    08:00-09:35
+                    - Gs
+                </div>
+                <div class="panel-body">
+                    Arbeitsauftrag zu Hause
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>1b Damen: </strong>
+                    14:10-15:45
+                    - SpM
+                </div>
+                <div class="panel-body">
+                    Ms
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>1i Damen: </strong>
+                    15:55-17:30
+                    - SpM
+                </div>
+                <div class="panel-body">
+                    Ms
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>1o Abteilung A/B: </strong>
+                    10:50-12:25
+                    - Bio
+                </div>
+                <div class="panel-body">
+                    Stunden fallen aus (Kompensation VHT vom 21.3.)
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>4k Abteilung A&amp;B: </strong>
+                    09:45-11:35
+                    - Ph
+                </div>
+                <div class="panel-body">
+                    SH
+                </div>
+                <div class="panel-footer">
+                    Raum: S238
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>4k Abteilung A/B: </strong>
+                    08:00-09:35
+                    - Bio / Ph
+                </div>
+                <div class="panel-body">
+                    Stunden fallen aus (Kompensation 'Woche des Gehirns')
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>5a: </strong>
+                    09:45-11:35
+                    - Gs
+                </div>
+                <div class="panel-body">
+                    Stunden fallen aus
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>5o: </strong>
+                    14:10-15:45
+                    - D
+                </div>
+                <div class="panel-body">
+                    Arbeitsauftrag zu Hause
+                </div>
+                <div class="panel-footer">
+                    Raum: -
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <section id="Stundenplan">
+
+            <h1>Stundenplan</h1>
+            <ul style="list-style-type:none">
+                <li>
+                    Englisch
+                </li>
+                <li>
+                    Mathe
+                </li>
+                <li>
+                    Deutsch
+                </li>
+                <li>
+                    Französisch
+                </li>
+                <li>
+                    Biologie
+                </li>
+                <li>
+                    Deutsch
+                </li>
+                <li>
+                    Französisch
+                </li>
+                <li>
+                    Biologie
+                </li>
+            </ul>
+
+        </section>
+
+
+    <div id="bm"></div>
+    <!--Animationen-->
+    <script>
+        src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.1/lottie_canvas.js"
+    </script>
+    <script>
+        src = "style.js"
+    </script>
+</body>
+
+</html>
