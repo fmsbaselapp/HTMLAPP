@@ -19,9 +19,6 @@
     <script src="Benutzer/src/site.js"></script>
     <script src="Benutzer/src/css.js" type="text/javascript"></script>
 
-
-    
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -29,219 +26,160 @@
     <title>Classmate</title>
     <link rel="stylesheet" href="Benutzer/src/home.css">
     <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
-    
+
 
 </head>
 
 <body>
-        <!--Sectionen-->
-        <div class="margin-stundenausfälle"></div>
-        <section id="Stundenausfälle">
-            <h1>Stundenausfälle</h1>
-            <p>keine Stundenausfälle</p>
-        </section>
-        
+    <!--Sectionen-->
+    <section id="Stundenausfälle">
+        <h1>Stundenausfälle</h1>
+        <h2>Keine Stundenausfälle</h2>
+    </section>
 
-        <section id="AlleStundenausfälle">
+    <section id="AlleStundenausfälle" class="keine">
 
-            <h2>Heute:</h2>
+        <h3>Heute:</h3>
 
-            <section class="Dunkler">
+        <section class="Dunkler">
+            <div id="ausfall-info" style="margin-top: 0; margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >4b: </span style="font-weight: 550;" > <br>
+                    13:20-14:55 - D <br>
+                    Arbeitsauftrag zu Hause (neuer Auftrag via Klassenchat) <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>4b: </strong>
-                    13:20-14:55
-                    - D
-                </div>
-                <div class="panel-body">
-                    Arbeitsauftrag zu Hause (neuer Auftrag via Klassenchat)
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>5ci Damen: </strong>
-                    12:30-14:05
-                    - SpM
-                </div>
-                <div class="panel-body">
-                    L. Engler
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;">5ci Damen: </span style="font-weight: 550;" > <br>
+                    SpM - 12:30-14:05<br>
+                    <span id="raum-person">L. Engler <br> Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>6i: </strong>
-                    13:20-14:55
-                    - D
-                </div>
-                <div class="panel-body">
-                    Arbeitsauftrag zu Hause
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 0;">
+                <p>
+                    <span style="font-weight: 550;" >6i: </span style="font-weight: 550;" > <br>
+                    13:20-14:55 - D <br>
+                    Arbeitsauftrag zu Hause <br>
+                    <span id="raum-person">Raum: -</span>
+                <p>
             </div>
+
         </section>
 
 
-            <h3>Donnerstag:</h3>
+        <h3>Donnerstag:</h3>
 
-            <section class="Dunkler">
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>1b: </strong>
-                    08:00-09:35
-                    - Gs
-                </div>
-                <div class="panel-body">
-                    Arbeitsauftrag zu Hause
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+        <section class="Dunkler">
+            <div id="ausfall-info" style="margin-top: 0; margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >1b: </span style="font-weight: 550;" > <br>
+                    08:00-09:35 - Gs <br>
+                    Arbeitsauftrag zu Hause <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>1b Damen: </strong>
-                    14:10-15:45
-                    - SpM
-                </div>
-                <div class="panel-body">
-                    Ms
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >1b Damen: </span style="font-weight: 550;" > <br>
+                    14:10-15:45 - SpM <br>
+                    Ms <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>1i Damen: </strong>
-                    15:55-17:30
-                    - SpM
-                </div>
-                <div class="panel-body">
-                    Ms
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >1i Damen: </span style="font-weight: 550;" > <br>
+                    15:55-17:30 - SpM <br>
+                    Ms <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
+
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>1o Abteilung A/B: </strong>
-                    10:50-12:25
-                    - Bio
-                </div>
-                <div class="panel-body">
-                    Stunden fallen aus (Kompensation VHT vom 21.3.)
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >1o Abteilung A/B: </span style="font-weight: 550;" > <br>
+                    10:50-12:25 - Bio <br>
+                    Stunden fallen aus (Kompensation VHT vom 21.3.) <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>4k Abteilung A&amp;B: </strong>
-                    09:45-11:35
-                    - Ph
-                </div>
-                <div class="panel-body">
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >4k Abteilung A&amp;B: </span style="font-weight: 550;" > <br>
+                    09:45-11:35 - Ph <br>
                     SH
-                </div>
-                <div class="panel-footer">
-                    Raum: S238
-                </div>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>4k Abteilung A/B: </strong>
-                    08:00-09:35
-                    - Bio / Ph
-                </div>
-                <div class="panel-body">
-                    Stunden fallen aus (Kompensation 'Woche des Gehirns')
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >4k Abteilung A/B: </span style="font-weight: 550;" > <br>
+                    08:00-09:35 - Bio / Ph <br>
+                    Stunden fallen aus (Kompensation 'Woche des Gehirns') <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>5a: </strong>
-                    09:45-11:35
-                    - Gs
-                </div>
-                <div class="panel-body">
-                    Stunden fallen aus
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 3.5vw;">
+                <p>
+                    <span style="font-weight: 550;" >5a:</span style="font-weight: 550;" ><br>
+                    09:45-11:35 - Gs <br>
+                    Stunden fallen aus <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <strong>5o: </strong>
-                    14:10-15:45
-                    - D
-                </div>
-                <div class="panel-body">
-                    Arbeitsauftrag zu Hause
-                </div>
-                <div class="panel-footer">
-                    Raum: -
-                </div>
+
+            <div id="ausfall-info" style="margin-bottom: 0;">
+                <p>
+                    <span style="font-weight: 550;" >5o:</span style="font-weight: 550;" > <br>
+                    14:10-15:45 - D<br>
+                    Arbeitsauftrag zu Hause <br>
+                    <span id="raum-person">Raum: -</span>
+                </p>
             </div>
         </section>
-        </section>
+    </section>
 
-        <section id="Stundenplan">
+    <section id="Stundenplan">
+        <h1>Stundenplan</h1>
+        <ul style="list-style-type:none">
+            <li>
+                Englisch
+            </li>
+            <li>
+                Mathe
+            </li>
+            <li>
+                Deutsch
+            </li>
+            <li>
+                Französisch
+            </li>
+            <li>
+                Biologie
+            </li>
+            <li>
+                Deutsch
+            </li>
+            <li>
+                Französisch
+            </li>
+            <li>
+                Biologie
+            </li>
+        </ul>
 
-            <h1>Stundenplan</h1>
-            <ul style="list-style-type:none">
-                <li>
-                    Englisch
-                </li>
-                <li>
-                    Mathe
-                </li>
-                <li>
-                    Deutsch
-                </li>
-                <li>
-                    Französisch
-                </li>
-                <li>
-                    Biologie
-                </li>
-                <li>
-                    Deutsch
-                </li>
-                <li>
-                    Französisch
-                </li>
-                <li>
-                    Biologie
-                </li>
-            </ul>
-
-        </section>
-
-
-    <div id="bm"></div>
-    <!--Animationen-->
-    <script>
-        src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.1/lottie_canvas.js"
-    </script>
-    <script>
-        src = "style.js"
-    </script>
+    </section>
 </body>
 
 </html>

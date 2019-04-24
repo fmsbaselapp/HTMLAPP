@@ -36,7 +36,7 @@ section#registrierung-karte {
   padding-bottom: 5vh;
   padding-right: 5vw;
   padding-left: 5vw;
-  height: 65vh;
+  height: calc(100vh -  35vh);
   position: relative;
 }
 
@@ -84,7 +84,13 @@ input#passwort_field_bestätigen {
 
 div#button {
   position: relative;
-  vertical-align: middle;
+  height: calc(100vh - 80vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 button {
@@ -94,8 +100,7 @@ button {
   border: 0;
   height: 13vh;
   width: 100%;
-  margin-top: 2vh;
-  position: absolute;
+  position: relative;
   border-radius: 50vw;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
