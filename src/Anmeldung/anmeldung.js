@@ -1,22 +1,18 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // Nutzer ist angemeldet
-    /*
+
     document.getElementById("user_div").style.display = "block";
     document.getElementById("anmeldung-karte").style.display = "none";
-    document.getElementById("button").style.display = "none";               //timon
-    */
+    document.getElementById("button").style.display = "none";       
+
 
     var user = firebase.auth().currentUser;
 
     if(user != null){
 
       var email_id = user.email;
-      //document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id;     //timon
-
-      //weiterleitung test seite von timon ==========================================================
-      window.location.href = "https://classmateapp.online/benutzer.html"
-      //=============================================================================================
+      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id;    
     }
 
   } else {
