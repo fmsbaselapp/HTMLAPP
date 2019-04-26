@@ -6,8 +6,6 @@ $fontsize_ul: 5vw
 
 $padding: 10px
 
-
-
 $box-schatten: 0 5px 5px rgba(0,0,0,.2)
 
 $hover-farbe: darken(#ffffff, 2%)
@@ -30,9 +28,6 @@ html
   height: 100%
   width: 100%
 
-
-
-
 body
   overflow: hidden
   background-color: $hintergrundfarbe
@@ -45,26 +40,21 @@ body
   padding-right: 5vw
   max-width: 100%
    
-  
-
 //============================================================
 
-  
 section#anmeldung-karte
   background-color: $hintergrundfarbe-karten
   overflow-y: scroll
   margin: 0
-  border-radius: 15px
+  border-radius: 5vw
   box-shadow: $box-schatten
   width: 80vw
   padding-top: 5vh
   padding-bottom: 5vh
   padding-right: 5vw
   padding-left: 5vw
-  height: 65vh
+  height: calc(100vh -  35vh) 
   position: relative
-
-
 
 input#email_field
   background-color: #DEE4E7
@@ -82,7 +72,6 @@ input#email_field
   
   ::-webkit-input-placeholder 
   font-size: 3.5vw !important
-  
 
 input#password_field
   background-color: #DEE4E7
@@ -103,7 +92,9 @@ input#password_field
 
 div#button
   position: relative
-  vertical-align: middle
+  height: calc(100vh - 80vh)
+  display: flex
+  align-items: center
   
 button
   background: #419AEC
@@ -116,9 +107,9 @@ button
   height: 13vh
   width: 100%
 
-  margin-top: 2vh
-  position: absolute
+  position: relative
 
+  
   border-radius: 50vw
   box-shadow: $box-schatten
 
@@ -129,7 +120,6 @@ button
   left: 50%
   -webkit-transform: translateX(-50%)
   transform: translateX(-50%)
-
 
 //schrift=============================================
 
@@ -164,21 +154,18 @@ p#anmeldung-untertitel
   margin-bottom: 1vh
 
 
-
-
-a
+a //link
   margin: auto
   font-size: 3.5vw
   font-family: poppins,sans-serif
   color: rgba(0, 0, 0, 0.36)
   text-align: center
-  max-width: 100vw
+  width: calc(100vw - 10vw)
   bottom: 5vh
   left: 50%
   -webkit-transform: translateX(-50%)
   transform: translateX(-50%)
   position: absolute
-
 
 h3
   margin: auto

@@ -9,57 +9,22 @@
   -webkit-border-radius: 0px;
 }
 
-@-webkit-keyframes vergrössern {
+@-webkit-keyframes alle {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    height: 115px;
+    height: 0;
   }
   100% {
-    -webkit-transform: rotate(xx) scale(1);
-            transform: rotate(xx) scale(1);
-    height: 270px;
+    height: auto;
   }
 }
 
-@keyframes vergrössern {
+@keyframes alle {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    height: 115px;
+    height: 0;
   }
   100% {
-    -webkit-transform: rotate(xx) scale(1);
-            transform: rotate(xx) scale(1);
-    height: 270px;
+    height: auto;
   }
-}
-
-@-webkit-keyframes mehr {
-  0% {
-    -webkit-transform: rotate(0) translateY(-100%);
-            transform: rotate(0) translateY(-100%);
-  }
-  100% {
-    -webkit-transform: rotate(0) translateY(0);
-            transform: rotate(0) translateY(0);
-  }
-}
-
-@keyframes mehr {
-  0% {
-    -webkit-transform: rotate(0) translateY(-100%);
-            transform: rotate(0) translateY(-100%);
-  }
-  100% {
-    -webkit-transform: rotate(0) translateY(0);
-            transform: rotate(0) translateY(0);
-  }
-}
-
-.mehr {
-  -webkit-animation: mehr 1s forwards 0s ease;
-          animation: mehr 1s forwards 0s ease;
 }
 
 html {
@@ -68,6 +33,7 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
+  scroll-snap-align: start;
 }
 
 body {
@@ -96,39 +62,47 @@ section#Stundenausfälle {
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 4;
   color: black;
-  scroll-snap-align: start;
   position: relative;
+}
+
+section#AlleStundenausfälle.keine {
+  position: relative;
+  background: #419AEC;
+  padding: 10px;
+  padding-top: 2vh;
+  height: 0;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: white;
+  scroll-snap-align: start;
+  -webkit-transform: translateY(-4vh);
+          transform: translateY(-4vh);
 }
 
 section#AlleStundenausfälle.alle {
   position: relative;
   background: #419AEC;
   padding: 10px;
+  padding-top: 2vh;
+  overflow: hidden;
   margin: auto;
   border-radius: 0px 0px 15px 15px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  z-index: 3;
+  z-index: 1;
   color: white;
-  -webkit-transform: translate(0, -20px);
-          transform: translate(0, -20px);
   scroll-snap-align: start;
-  position: relative;
-}
-
-section#AlleStundenausfälle {
-  position: relative;
-  background: #419AEC;
-  padding: 10px;
-  margin: auto;
-  border-radius: 0px 0px 15px 15px;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  z-index: 3;
-  color: white;
-  -webkit-transform: translate(0, -20px);
-          transform: translate(0, -20px);
-  scroll-snap-align: start;
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
+  height: auto;
+  -webkit-transition: height 1s ease;
+  transition: height 1s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   position: relative;
 }
 
@@ -137,19 +111,16 @@ section#Stundenplan {
   position: relative;
   padding: 10px;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 2;
   color: black;
-  scroll-snap-align: start;
   position: relative;
 }
 
 .Dunkler {
-  padding: 1vw;
+  padding: 3vw;
   background: #3780C4;
   border-radius: 15px;
 }
@@ -158,7 +129,27 @@ h1 {
   font-family: poppins,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 5vw;
+  margin: 0;
+}
+
+h2 {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6vw;
+  margin-top: 3vh;
+}
+
+h3 {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vw;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+  margin-left: 3vw;
+  scroll-snap-align: start;
 }
 
 ul {
@@ -170,9 +161,24 @@ ul {
 
 p {
   font-family: poppins, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
-  font-size: 20px;
+  font-size: 3.5vw;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+span#raum-person {
+  font-family: poppins, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 3.5vw;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 section#Stundenausfälle:hover {
@@ -194,16 +200,5 @@ section#Stundenplan:hover {
 section#AlleStundenausfälle:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-#bm {
-  width: 250px;
-  z-index: 5;
-  /*
-    center bei relative:
-
-    left: 50%
-    -webkit-transform: translateX(-50%)
-    transform: translateX(-50%) */
 }
 /*# sourceMappingURL=home.css.map */

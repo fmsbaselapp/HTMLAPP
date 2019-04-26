@@ -6,24 +6,19 @@
 	-webkit-border-radius: 0px
 
 //============================================================
-@keyframes vergrössern
+
+
+@keyframes alle
     0%
-        transform: scale(1)
-        height: 115px
+      height: 0
+    
         
     100%
-        transform: rotate(xx) scale(1)
-        height: 270px
+      height: auto
 
-@keyframes mehr
-    0%
-        transform: rotate(0) translateY(-100%)
-        
-    100%
-        transform: rotate(0) translateY(0)
 
-.mehr
-  animation: mehr 1s forwards 0s ease
+//.alle
+ // animation: alle 1s forwards 0s ease
 //============================================================
 
 $fontsize_h1: 20px
@@ -49,6 +44,7 @@ html
   -webkit-user-select: none
   -moz-user-select: none
   user-select: none
+  scroll-snap-align: start
 
 
 body
@@ -62,7 +58,7 @@ body
   padding-bottom: 5vh
   padding-left: 5vw
   padding-right: 5vw
-  
+
   
   width: calc(100vw - 10vw)
   height: 100%
@@ -83,43 +79,56 @@ section#Stundenausfälle
   z-index: 4
   color: black
  
+  position: relative
+
+
+section#AlleStundenausfälle.keine
+  position: relative //eventueller fehler
+  background: #419AEC
+  padding: $padding
+  padding-top: 2vh
+
+  height: 0
+  overflow: hidden
+  margin: auto
+  border-radius: 0px 0px 15px 15px
+ 
+  box-shadow: $box-schatten
+  z-index: 1
+  color: white
   scroll-snap-align: start
 
-  position: relative
+  transform: translateY(-4vh)
+  
+
+
 
 section#AlleStundenausfälle.alle
   position: relative //eventueller fehler
   background: #419AEC
   padding: $padding
+  padding-top: 2vh
 
+  overflow: hidden
   margin: auto
   border-radius: 0px 0px 15px 15px
  
   box-shadow: $box-schatten
-  z-index: 3
+  z-index: 1
   color: white
-
-
-  transform: translate(0, -20px)
   scroll-snap-align: start
+
+  transform: translateY(-2vh)
+  height: auto
+  transition: height 1s ease
+  
+  
+  animation-fill-mode: forwards
   position: relative
-
-section#AlleStundenausfälle
-  position: relative //eventueller fehler
-  background: #419AEC
-  padding: $padding
-
-  margin: auto
-  border-radius: 0px 0px 15px 15px
- 
-  box-shadow: $box-schatten
-  z-index: 3
-  color: white
+  
 
 
-  transform: translate(0, -20px)
-  scroll-snap-align: start
-  position: relative
+
 
 
 
@@ -129,46 +138,68 @@ section#Stundenplan
   padding: $padding
 
   margin: auto
-  margin-top: 20px
-  margin-bottom: 20px 
+
 
   border-radius: 15px
   box-shadow: $box-schatten
   z-index: 2
   color: black
 
-  scroll-snap-align: start
-
   position: relative
 
-
 .Dunkler
-  padding: 1vw
+  padding: 3vw
   background: #3780C4
   border-radius: 15px
 
-  
-
 //schrift============================================================
 
-h1
+h1 //stundenausfälle, Stundenplan
   font-family: poppins,sans-serif
   font-weight: 400
   font-style: normal
-  font-size: $fontsize_h1
+  font-size: 5vw
+  margin: 0
+  
+h2 //keine stundenausfälle
+  font-family: poppins, sans-serif
+  font-weight: 700
+  font-style: normal
+  font-size: 6vw
+  margin-top: 3vh
+  //text-align: center
+  
+h3 //heute, morgen, donnerstag
+  font-family: poppins, sans-serif
+  font-weight: 400
+  font-style: normal
+  font-size: 5vw
+  margin-bottom: 1vh
+  margin-top: 2vh
+  margin-left: 3vw
+  scroll-snap-align: start
 
-ul
+ul //fächer
   font-family: poppins, sans-serif
   font-weight: 700
   font-style: normal
   font-size: $fontsize_ul
 
-p
+p //mehr stundenausfälle
   font-family: poppins, sans-serif
-  font-weight: 700
+  font-weight: 500
   font-style: normal
-  font-size: $fontsize_ul
+  font-size: 3.5vw
+  margin-block-start: 0
+  margin-block-end: 0
 
+span#raum-person
+  font-family: poppins, sans-serif
+  font-weight: 300
+  font-style: italic
+  font-size: 3.5vw
+  margin-block-start: 0
+  margin-block-end: 0
 
 //hover============================================================
 section#Stundenausfälle:hover
@@ -185,14 +216,16 @@ section#AlleStundenausfälle:hover
   transition: $transition-hover
 
 //============================================================
-#bm
-  width: 250px
-  z-index: 5
+
+// center bei relative: 
+// left: 50%
+// -webkit-transform: translateX(-50%)
+// transform: translateX(-50%)
 
 
-  /* 
-    center bei relative: 
 
-    left: 50%
-    -webkit-transform: translateX(-50%)
-    transform: translateX(-50%)
+ 
+
+ 
+ 
+  
