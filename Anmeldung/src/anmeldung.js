@@ -33,9 +33,9 @@ function login(){
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
-    var errorMessage = error.message;
+    var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs-Mail oder dein Passwort stimmt nicht überein!";
 
-    window.alert("Error : " + errorMessage);
+    window.alert(errorMessage);
 
     // ...
   });
