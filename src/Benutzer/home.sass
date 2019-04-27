@@ -80,17 +80,13 @@ section#Stundenausfälle
   color: black
   position: relative
 
-.Dunkler
+div#Dunkler.show
   padding: 3vw
   background: #01579B
-  border-radius: 15px
-  
+  border-radius: 10px
 
-//.Dunkler.keine
-  padding: 3vw
-  background: #2196F3
-  border-radius: 15px
-  color: #2196F3
+
+
 
 section#AlleStundenausfälle.keine
   position: relative //eventueller fehler
@@ -114,7 +110,7 @@ section#AlleStundenausfälle.keine
   position: relative
 
   transition-duration: 500ms
-  transition-property: max-height, box-shadow
+  transition-property: max-height
   transition-timing-function: cubic-bezier(.39,.58,.57,1)
 
 
@@ -140,8 +136,8 @@ section#AlleStundenausfälle.alle
   transform: translateY(-2vh)
   
 
-  transition-duration: 500ms
-  transition-property: max-height, box-shadow
+  transition-duration: 500ms  //500ms
+  transition-property: max-height
   transition-timing-function: cubic-bezier(.47,0,.74,.71)
   
 

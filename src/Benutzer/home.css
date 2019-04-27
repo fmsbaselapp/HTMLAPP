@@ -62,10 +62,10 @@ section#Stundenausfälle {
   position: relative;
 }
 
-.Dunkler {
+div#Dunkler.show {
   padding: 3vw;
   background: #01579B;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 section#AlleStundenausfälle.keine {
@@ -87,10 +87,8 @@ section#AlleStundenausfälle.keine {
   position: relative;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
-  -webkit-transition-property: max-height, -webkit-box-shadow;
-  transition-property: max-height, -webkit-box-shadow;
-  transition-property: max-height, box-shadow;
-  transition-property: max-height, box-shadow, -webkit-box-shadow;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
   -webkit-transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
           transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
 }
@@ -114,10 +112,8 @@ section#AlleStundenausfälle.alle {
           transform: translateY(-2vh);
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
-  -webkit-transition-property: max-height, -webkit-box-shadow;
-  transition-property: max-height, -webkit-box-shadow;
-  transition-property: max-height, box-shadow;
-  transition-property: max-height, box-shadow, -webkit-box-shadow;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
   -webkit-transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
           transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
   position: relative;
