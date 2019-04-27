@@ -45,7 +45,7 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
   width: calc(100vw - 10vw);
-  height: 100%;
+  height: auto;
   position: absolute;
 }
 
@@ -101,7 +101,7 @@ section#AlleStundenausfälle.alle {
   padding: 10px;
   padding-bottom: 10px;
   padding-top: 0px;
-  max-height: 1000%;
+  max-height: 1000vh;
   height: auto;
   overflow: hidden;
   margin: auto;
