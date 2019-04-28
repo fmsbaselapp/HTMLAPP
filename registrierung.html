@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/src/Registrierung/registrierung.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
+  <link rel="stylesheet" href="src/Registrierung/registrierung.css">
   <title>Registrierung</title>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,67 +24,61 @@
 
 
 <body scroll="no">
+  
 
-
-  <section id="registrierung-karte">
-    <!--Titel-->
-    <h1>Registrierung</h1>
-    <p id="registrierung-untertitel">Registriere dich mit deiner Edubs E-Mail<br>
-      und erstelle ein Passwort.</p>
+    <section id="anmeldung-karte">
+      <!--Titel-->
+      <h1>Registrieren</h1>
+      <p id="anmeldung-untertitel">Registriere dich mit deiner Edubs E-Mail<br>
+        und deinem Passwort.</p>
 
       <!--Email Input-->
-      <p class="p">Deine Edubs E-Mail:</p>
+      <p class="p">Edubs E-Mail:</p>
       <div id="login_div" class="main-div" style="text-align:center;">
-        <input type="email" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" />
+        <input type="email" onkeypress="enter(event)" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" />
       </div>
 
       <!--Passwort Input-->
-      <p class="p">Neues Passwort:</p>
+      <p class="p">Passwort:</p>
       <div id="login_div" class="main-div" style="text-align:center;">
-        <input type="password" placeholder="Passwort" id="password_field" />
-      </div>
-
-      <!--Passwort bestätigen Input-->
-      <p class="p">Passwort bestätigen:</p>
-      <div id="password_field_bestätigen" style="text-align:center;">
-        <input id="passwort_field_bestätigen" placeholder="Passwort bestätigen" type="password">
+        <input type="password" onkeypress="enter(event)" placeholder="Passwort" id="password_field" />
       </div>
 
       <!--Hier gehts zur Registrierung-->
-      <p><a href="index.html">Du hast schon ein Konto?<br>Melde dich hier an.</a></p>
-     
+
+        <p><a href="index.html">Du bist schon registriert?<br>Hier gehts zur Anmeldung</a></p>
 
     </section>
 
 
-    <!--Registrier Button-->
-    <div id="button" style="text-align:center;">
-      <button onclick="create_account()">Registrierung</button>
-  </div>
-
-    <div id="user_div" class="loggedin-div">
-      <h3>Willkommen!</h3>
-      <p id="user_para">Du bist jetzt registriert!</p>
-      <button onclick="logout()">Abmelden</button>
+   <!--Registrier Button-->
+  <div id="button" style="text-align:center;">
+      <button onclick="create_user()">Registrieren</button>
     </div>
 
-
-    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
-        authDomain: "classmateapp-72ce9.firebaseapp.com",
-        databaseURL: "https://classmateapp-72ce9.firebaseio.com",
-        projectId: "classmateapp-72ce9",
-        storageBucket: "classmateapp-72ce9.appspot.com",
-        messagingSenderId: "218437580841"
-      };
-      firebase.initializeApp(config);
-    </script>
-    <script src="src/Registrierung/registrierung.js"></script>
+  <div id="user_div" class="loggedin-div">
+    <h3>Willkommen!</h3>
+    <p id="user_para">Du bist angemeldet!</p>
+    <button onclick="logout()">Abmelden</button>
+  </div>
 
 
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDFqZo1ImAZW3NhRMM_Ad6wj9jZ0cSYaH0",
+      authDomain: "classmateapp-72ce9.firebaseapp.com",
+      databaseURL: "https://classmateapp-72ce9.firebaseio.com",
+      projectId: "classmateapp-72ce9",
+      storageBucket: "classmateapp-72ce9.appspot.com",
+      messagingSenderId: "218437580841"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="src/Registrierung/registrierung.js"></script>
+
+  
 </body>
 
 </html>
