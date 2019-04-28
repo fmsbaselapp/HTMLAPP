@@ -53,12 +53,22 @@ function login(){
       var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs-Mail oder dein Passwort stimmt nicht überein!";
   
       window.alert(errorMessage);
-  
-      // ...
+
     });
 
 }
 
 function logout(){
   firebase.auth().signOut();
+}
+
+function send_verification(){
+  var user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+});
+
 }
