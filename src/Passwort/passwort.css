@@ -160,6 +160,7 @@ a {
 }
 
 div#teamwork-div {
+  margin-top: 1vh;
   position: relative;
   height: calc(100vh - 70vh);
   display: -webkit-box;
@@ -168,25 +169,6 @@ div#teamwork-div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-a#teamwork {
-  background: #419AEC;
-  color: white;
-  padding: 10px;
-  border: 0;
-  height: 5vh;
-  width: auto;
-  bottom: 25%;
-  position: absolute;
-  text-align: center;
-  border-radius: 50vw;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  font-family: poppins,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 3.5vw;
 }
 
 h3 {
