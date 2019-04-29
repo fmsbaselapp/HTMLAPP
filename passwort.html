@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/fml2ddx.css">
   <link rel="stylesheet" href="src/Passwort/passwort.css">
-  <title>Registrierung</title>
+  <title>Passwort Zurücksetzen</title>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138701066-1"></script>
@@ -26,13 +26,33 @@
 
 <body scroll="no">
 
-    <section id="registrierung-karte">
+  <script type='text/javascript'>
+    $(document).ready(function () {
+        $('#email_field').keyup(function () {
+            var re = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;     //@can do isch dr checker obs e edubs mail isch: /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;  
+            if (re.test($(this).val())) {
+                $(this).css("border-color", "#54C17C");
+                $(this).css("background-color", "white");
+            } else {
+                $(this).css("border-color", "#F44336");
+                $(this).css("background-color", "white");
+            }
+        });
+    });
+  </script>  
+
+  <section id="registrierung-karte">
       <!--Titel-->
+<<<<<<< HEAD
+      <h1>Passwort Zurücksetzen</h1>
+      <p id="registrierung-untertitel">Setze dein Passwort zurück</p>
+=======
       <h1>Zurücksetzen</h1>
       <p id="registrierung-untertitel">Um dein Passwort zurückzusetzen,<br>gib hier deine Edubs-Email ein</p>
+>>>>>>> 1764e8d3be52810c852db6307e8dc788f380b470
 
       <!--Email Input-->
-      <p class="p">Edubs E-Mail:</p>
+      <p class="p">Edubs-Mail:</p>
       <div id="login_div" class="main-div" style="text-align:center;">
         <input type="email" onkeypress="enter(event)" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" />
       </div>
@@ -44,7 +64,7 @@
 
       <!--Hier gehts zur Anmeldung-->
 
-        <a href="index.html" style="text-decoration:none;">Du hast dein Passwort zurückgesetzt<br>Hier gehts zur<span style="text-decoration:underline;">Anmeldung</span></a>
+        <a href="index.html" style="text-decoration:none;">Hast du dein Passwort zurückgesetzt?<br>Hier gehts zur<span style="text-decoration:underline;">Anmeldung</span></a>
     </section>
 
 
@@ -52,6 +72,13 @@
   <div id="button" style="text-align:center;">
       <button onclick="passwort_zurücksetzen()">Zurücksetzen</button>
     </div>
+
+    <div id="user_div" class="loggedin-div">
+      <h3>Geschafft!</h3>
+      <p id="user_para">Du hast dein Passwort zurückgesetzt. Schau bitte in deiner Edubs-Mail nach.</p>
+      <button href=index.html>Anmelden</button>
+    </div>
+  
 
   <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
   <script>
