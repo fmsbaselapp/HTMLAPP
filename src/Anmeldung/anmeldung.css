@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   overflow: hidden;
   -ms-overflow-style: none;
@@ -39,21 +40,7 @@ section#anmeldung-karte {
   position: relative;
 }
 
-input#email_field {
-  background-color: #DEE4E7;
-  border: 3px solid #DEE4E7;
-  -webkit-appearance: none !important;
-  -webkit-box-shadow: inset 0px 0px 0px 0px red;
-          box-shadow: inset 0px 0px 0px 0px red;
-  border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 72vw;
-  min-height: 4vh;
-  font-size: 3.5vw !important;
-}
-
-input#password_field {
+input#email_field, input#password_field {
   background-color: #DEE4E7;
   border: 3px solid #DEE4E7;
   -webkit-appearance: none !important;
@@ -130,7 +117,7 @@ p#anmeldung-untertitel {
   margin-bottom: 1vh;
 }
 
-a {
+a#registrierung-link {
   margin: auto;
   font-size: 3.5vw;
   font-family: poppins,sans-serif;
@@ -142,6 +129,19 @@ a {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
+}
+
+#passwort-zurücksetzen {
+  margin: auto;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  display: none;
 }
 
 h3 {

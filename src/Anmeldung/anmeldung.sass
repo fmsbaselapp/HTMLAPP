@@ -56,7 +56,7 @@ section#anmeldung-karte
   height: calc(100vh -  35vh) 
   position: relative
 
-input#email_field
+input#email_field, input#password_field
   background-color: #DEE4E7
   border: 3px solid #DEE4E7
   -webkit-appearance:none!important
@@ -66,29 +66,12 @@ input#email_field
   padding-left: 10px
   padding-right: 10px
   
- 
   width: 72vw
   min-height: 4vh
   
   ::-webkit-input-placeholder 
   font-size: 3.5vw !important
 
-input#password_field
-  background-color: #DEE4E7
-  border: 3px solid #DEE4E7
-  -webkit-appearance:none!important
-  box-shadow: inset 0px 0px 0px 0px red
-  border-radius: 15px
-
-  padding-left: 10px
-  padding-right: 10px
-  
-  
-  width: 72vw
-  min-height: 4vh
- 
-  ::-webkit-input-placeholder 
-  font-size: 3.5vw !important
 
 div#button
   position: relative
@@ -153,8 +136,7 @@ p#anmeldung-untertitel
   margin-right: 7vw
   margin-bottom: 1vh
 
-
-a //link
+a#registrierung-link
   margin: auto
   font-size: 3.5vw
   font-family: poppins,sans-serif
@@ -166,6 +148,17 @@ a //link
   -webkit-transform: translateX(-50%)
   transform: translateX(-50%)
   position: absolute
+
+#passwort-zurücksetzen
+  margin: auto
+  font-size: 3.5vw
+  font-family: poppins,sans-serif
+  color: #F44336
+  text-align: center
+  align-self: center
+  position: relative
+  display: none
+
 
 h3
   margin: auto

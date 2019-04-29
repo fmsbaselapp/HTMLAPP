@@ -35,18 +35,20 @@
       <!--Email Input-->
       <p class="p">Edubs E-Mail:</p>
       <div id="login_div" class="main-div" style="text-align:center;">
-        <input type="email" onkeypress="enter(event)" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" />
+        <input type="email" onkeypress="enter(event)" placeholder="vorname.nachname@stud.edubs.ch" id="email_field" class="input" />
       </div>
 
       <!--Passwort Input-->
       <p class="p">Passwort:</p>
       <div id="login_div" class="main-div" style="text-align:center;">
-        <input type="password" onkeypress="enter(event)" placeholder="Passwort" id="password_field" />
+        <input type="password" onkeypress="enter(event)" placeholder="Passwort" id="password_field" class="input" />
       </div>
 
-      <!--Hier gehts zur Registrierung-->
+      <!--Input Error / Passwort zurücksetzen-->
+      <p style="text-align:center;"><a id="passwort-zurücksetzen" href="https://google.com" style="text-decoration:none;">Email oder Passwort ist falsch!<br><span style="text-decoration:underline;">Passwort zurücksetzen</span></a></p>
 
-        <p><a href="registrierung.html">Du hast noch kein Konto?<br>Hier gehts zur Registrierung</a></p>
+      <!--Hier gehts zur Registrierung-->
+      <a id="registrierung-link" href="registrierung.html" style="text-decoration:none;">Du hast noch kein Konto?<br>Hier gehts zur <span style="text-decoration:underline;">Registrierung</span></a>
 
     </section>
 
