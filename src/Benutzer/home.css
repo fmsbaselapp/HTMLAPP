@@ -62,7 +62,7 @@ section#Stundenausfälle {
   position: relative;
 }
 
-div#Dunkler.show {
+div#Dunkler {
   padding: 3vw;
   background: #01579B;
   border-radius: 10px;
