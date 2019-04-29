@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   overflow: hidden;
   -ms-overflow-style: none;
@@ -23,7 +24,7 @@ body {
   max-width: 100%;
 }
 
-section#anmeldung-karte {
+section#registrierung-karte {
   background-color: #ffffff;
   overflow-y: scroll;
   margin: 0;
@@ -54,6 +55,20 @@ input#email_field {
 }
 
 input#password_field {
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: inset 0px 0px 0px 0px red;
+          box-shadow: inset 0px 0px 0px 0px red;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 72vw;
+  min-height: 4vh;
+  font-size: 3.5vw !important;
+}
+
+input#passwort_field_bestätigen {
   background-color: #DEE4E7;
   border: 3px solid #DEE4E7;
   -webkit-appearance: none !important;
@@ -109,7 +124,7 @@ h1 {
   margin-top: 0;
 }
 
-p#anmeldung-untertitel {
+p#registrierung-untertitel {
   text-align: center;
   font-family: poppins,sans-serif;
   font-style: normal;
@@ -151,4 +166,4 @@ h3 {
 div#user_div {
   text-align: center;
 }
-/*# sourceMappingURL=anmeldung.css.map */
+/*# sourceMappingURL=registrierung.css.map */
