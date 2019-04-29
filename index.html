@@ -19,7 +19,7 @@
 
   gtag('config', 'UA-138701066-1');
 </script>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
 </head>
 
 
@@ -41,13 +41,12 @@
       $('#password_field').keyup(function () {
           var re = /^.{8,}$/;   //starkes passwort
           if (re.test($(this).val())) {
-
-              $(this).css("border-color", "#54C17C");
-              $(this).css("background-color", "white");
-          } else {
-              $(this).css("border-color", "#F44336");
-              $(this).css("background-color", "white");
-          }
+            $(this).css("border-color", "#54C17C");
+            $(this).css("background-color", "white");
+        } else {
+            $(this).css("border-color", "#F44336");
+            $(this).css("background-color", "white");
+        }
       });
   });
 </script>
