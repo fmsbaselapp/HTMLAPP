@@ -1,0 +1,169 @@
+@charset "UTF-8";
+html {
+  overflow: hidden;
+  -ms-overflow-style: none;
+  position: fixed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  background-color: #ECEFF2;
+  position: relative;
+  height: calc(100% - 10vh);
+  margin: 0;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  max-width: 100%;
+}
+
+section#registrierung-karte {
+  background-color: #ffffff;
+  overflow-y: scroll;
+  margin: 0;
+  border-radius: 5vw;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  width: 80vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  height: calc(100vh -  35vh);
+  position: relative;
+}
+
+input#email_field {
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: inset 0px 0px 0px 0px red;
+          box-shadow: inset 0px 0px 0px 0px red;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 72vw;
+  min-height: 4vh;
+  font-size: 3.5vw !important;
+}
+
+input#password_field {
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: inset 0px 0px 0px 0px red;
+          box-shadow: inset 0px 0px 0px 0px red;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 72vw;
+  min-height: 4vh;
+  font-size: 3.5vw !important;
+}
+
+input#passwort_field_bestätigen {
+  background-color: #DEE4E7;
+  border: 3px solid #DEE4E7;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: inset 0px 0px 0px 0px red;
+          box-shadow: inset 0px 0px 0px 0px red;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 72vw;
+  min-height: 4vh;
+  font-size: 3.5vw !important;
+}
+
+div#button {
+  position: relative;
+  height: calc(100vh - 80vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  background: #419AEC;
+  color: white;
+  padding: 10px;
+  border: 0;
+  height: 13vh;
+  width: 100%;
+  position: relative;
+  border-radius: 50vw;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: poppins,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+h1 {
+  text-align: center;
+  font-family: poppins,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 10vw;
+  margin-bottom: 0;
+  color: #000000;
+  margin-top: 0;
+}
+
+p#registrierung-untertitel {
+  text-align: center;
+  font-family: poppins,sans-serif;
+  font-style: normal;
+  font-size: 3.5vw;
+  max-width: 70vw;
+  margin: auto;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 3vh;
+}
+
+.p {
+  font-size: 5vw;
+  font-family: poppins,sans-serif;
+  color: #000000;
+  margin-left: 4vw;
+  margin-right: 7vw;
+  margin-bottom: 1vh;
+}
+
+a {
+  margin: auto;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: rgba(0, 0, 0, 0.36);
+  text-align: center;
+  width: calc(100vw - 10vw);
+  bottom: 5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+h3 {
+  margin: auto;
+}
+
+div#user_div {
+  text-align: center;
+}
+/*# sourceMappingURL=registrierung.css.map */
