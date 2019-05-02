@@ -41,7 +41,6 @@ var input = document.getElementById("email_field"),
         document.getElementById("email_field").value = newValue + "stud.edubs.ch";
         mail_check();
         document.getElementsByName("html").blur();
-        
       };
     };
 
