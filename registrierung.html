@@ -20,29 +20,15 @@
   gtag('config', 'UA-138701066-1');
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
-
 </head>
 
 
 <body scroll="no">
-    <script type='text/javascript'>
-      $(document).ready(function () {
-          $('#email_field').keyup(function () {
-              var re = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;     //@can do isch dr checker obs e edubs mail isch: /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;  
-              if (re.test($(this).val())) {
-                  $(this).css("border-color", "#54C17C");
-                  $(this).css("background-color", "white");
-              } else {
-                  $(this).css("border-color", "#F44336");
-                  $(this).css("background-color", "white");
-              }
-          });
-      });
-      $(document).ready(function () {
-        $('#password_field').keyup(function () {
-            var re = /^.{8,}$/;   //starkes passwort
+  <script type='text/javascript'>
+    $(document).ready(function () {
+        $('#email_field').keyup(function () {
+            var re = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;     //@can do isch dr checker obs e edubs mail isch: /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm;  
             if (re.test($(this).val())) {
-  
                 $(this).css("border-color", "#54C17C");
                 $(this).css("background-color", "white");
             } else {
@@ -51,7 +37,19 @@
             }
         });
     });
-  </script>
+    $(document).ready(function () {
+      $('#password_field').keyup(function () {
+          var re = /^.{8,}$/;   //starkes passwort
+          if (re.test($(this).val())) {
+            $(this).css("border-color", "#54C17C");
+            $(this).css("background-color", "white");
+        } else {
+            $(this).css("border-color", "#F44336");
+            $(this).css("background-color", "white");
+        }
+      });
+  });
+</script>
   
 
     <section id="registrierung-karte">
@@ -72,10 +70,11 @@
       <div id="login_div" class="main-div" style="text-align:center;">
         <input type="password" onkeypress="enter(event)" placeholder="Passwort" id="password_field" class="input" />
       </div>
+
       </form>
       <!--Hier gehts zur Registrierung-->
-
         <a href="index.html" style="text-decoration:none;">Du bist schon registriert?<br>Hier gehts zur <span style="text-decoration:underline;">Anmeldung</span></a>
+        
     </section>
 
 
