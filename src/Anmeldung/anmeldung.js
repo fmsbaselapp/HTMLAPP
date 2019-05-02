@@ -1,3 +1,38 @@
+var input = document.getElementById("email_field"),
+    oldValue,
+    newValue,
+    difference = function(value1, value2) {
+      var output = [];
+      for(i = 0; i < value2.length; i++) {
+        if(value1[i] !== value2[i]) {
+          output.push(value2[i]);
+        }
+      }
+      return output.join("");
+    },
+
+    keyDownHandler = function() {
+      oldValue = input.value;
+    },
+    inputHandler = function() {
+      newValue = input.value;
+
+      //wenn @ gedrückt wird
+      if (difference(oldValue, newValue) === "@"){ //check if @
+
+        document.getElementById("email_field").value = newValue + "stud.edubs.ch";}
+        document.getElementById("password_field").next().focus();
+    }
+
+input.addEventListener('keydown', keyDownHandler);
+input.addEventListener('input', inputHandler);
+
+
+
+
+
+
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // Nutzer ist angemeldet
@@ -26,6 +61,16 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
+function test(email) {
+  return /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm.test(email)
+}
+if (emailIsValid === true){
+  document.getElementById("button").style.display = "none";       
+}
+
+
+
+/*
 function login(){
 
   var userEmail = document.getElementById("email_field").value;
@@ -50,8 +95,11 @@ function login(){
   });
 
 }
-
-
+*/
 function logout(){
   firebase.auth().signOut();
 }
+
+
+
+
