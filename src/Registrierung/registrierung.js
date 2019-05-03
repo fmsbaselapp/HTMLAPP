@@ -169,7 +169,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      var email_verified = user.Verified;
+      var email_verified = user.emailVerified;
       document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id + "Edubs-Mail bestätigung:" + email_verified;  
     }
 

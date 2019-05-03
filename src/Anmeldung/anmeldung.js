@@ -13,8 +13,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      var email_verified = user.Verified;
-      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id + "Edubs-Mail bestätigung:" + email_verified;    
+      var email_verified = user.emailVerified;
+      document.getElementById("user_para").innerHTML = "Angemeldet mit : " + email_id + <br/>+ email_verified;    
     }
 
   } else {
