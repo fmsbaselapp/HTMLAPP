@@ -6,14 +6,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("anmeldung-karte").style.display = "none";
     document.getElementById("button").style.display = "none";       
 
-
     var user = firebase.auth().currentUser;
 
     if(user != null){
 
       var email_id = user.email;
-      var email_verified = user.emailVerified;
-      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id + <br/> +"Edubs-Mail bestätigt?:" + email_verified;    
+      //var email_verified = user.emailVerified;
+      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id;    
     }
 
   } else {
@@ -170,8 +169,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      var email_verified = user.emailVerified;
-      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id + <br/> +"Edubs-Mail bestätigt?:" + email_verified;  
+      //var email_verified = user.emailVerified;
+      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id;  
     }
 
   } else {
@@ -180,13 +179,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "none";
     document.getElementById("anmeldung-karte").style.display = "block";
     document.getElementById("button").style.display = "flex";}
-});
-
-function send_verification()
-var user = firebase.auth().currentUser;
-
-user.sendEmailVerification().then(function() {
-  // Email sent.
-}).catch(function(error) {
-  // An error happened.
 });
