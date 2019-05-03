@@ -12,7 +12,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Bestätige deine Edubs-Mail: " + email_id;    
+      var email_verified = user.emailVerified;
+      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id + <br/> +"Edubs-Mail bestätigt?:" + email_verified;    
     }
 
   } else {
@@ -181,7 +182,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("button").style.display = "flex";}
 });
 
-function verification()
+function send_verification()
 var user = firebase.auth().currentUser;
 
 user.sendEmailVerification().then(function() {
