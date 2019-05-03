@@ -5,7 +5,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "block";
     document.getElementById("anmeldung-karte").style.display = "none";
     document.getElementById("button").style.display = "none";       
-    document.getElementById("user_div").addEventListener("load", send_verification);
 
     var user = firebase.auth().currentUser;
 
