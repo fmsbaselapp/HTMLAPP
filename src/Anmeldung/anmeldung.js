@@ -14,7 +14,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       var email_id = user.email;
       var email_verified = user.emailVerified;
-      document.getElementById("user_para").innerHTML = "Angemeldet mit : " + email_id + <br/> + "Edubs-Mail bestätigt?" + email_verified;    
+      document.getElementById("user_para").innerHTML = "Angemeldet mit : " + email_id + <br/> + "Edubs-Mail bestätigt?" + email_verified;   
     }
 
   } else {
@@ -35,15 +35,13 @@ function login(){
     // Hier wird der Error wiedergegeben
     var errorCode = error.code;
     var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs-Mail oder dein Passwort stimmt nicht überein!";
-    //document.getElementsByClassName("input").style.borderColor = "#F44336";
-
     //Css Values
   
     document.getElementById("email_field").setAttribute(
       "style", "border-color: #F44336; background-color: white;");
     document.getElementById("password_field").setAttribute(
       "style", "border-color: #F44336; background-color: white;");
-    document.getElementById("passwort-zurücksetzen").style.display = "block";
+    document.getElementById("passwort-zurücksetzen").style.display = "block";   
     //window.alert(errorMessage);
 
     // ...
@@ -105,17 +103,12 @@ var input = document.getElementById("email_field"),
         document.getElementById("email_field").value = newValue + "stud.edubs.ch";
         mail_check();
         document.getElementById("password_field").focus();
-        focused.next("input").trigger('touchstart');
         
       };
     };
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
-
-
-//document.getElementById("email_field").on('input', function (event){
-  //document.getElementById("email_field").value = document.getElementById("email_field").value.replace(/^(([A-Z]{0,})([0-9]{0,}))/gm, '')});
 
 //check ob eingabe bei inputs stimmt => rot/grüner rahmen bei inputs
 function mail_check(){
