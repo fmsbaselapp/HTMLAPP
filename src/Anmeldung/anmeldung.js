@@ -54,7 +54,27 @@ function logout(){
   firebase.auth().signOut();
 }
 
+//Diese Zeichen nicht eingebbar
+$("input[type='email']").on('keypress', function (e) {
+  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+*"' £\/?-]/;
+    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    console.log(key)
+    if(blockSpecialRegex.test(key) || $.isNumeric(key)){
+      e.preventDefault();
+      return false;
+    }
+    });
+$("input[type='email']").on('keypress', function (e) {
+  var blockSpecialRegex = /[A-Z]/;
+    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    console.log(key)
+    if(blockSpecialRegex.test(key) || $.isNumeric(key)){
+      e.preventDefault();
+      return false;
+    }
+    });    
 
+    
 
 
 //autocomlete nach @
@@ -90,6 +110,10 @@ var input = document.getElementById("email_field"),
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
+
+
+//document.getElementById("email_field").on('input', function (event){
+  //document.getElementById("email_field").value = document.getElementById("email_field").value.replace(/^(([A-Z]{0,})([0-9]{0,}))/gm, '')});
 
 //check ob eingabe bei inputs stimmt => rot/grüner rahmen bei inputs
 function mail_check(){

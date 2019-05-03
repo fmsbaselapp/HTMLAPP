@@ -74,7 +74,25 @@ user.sendEmailVerification().then(function() {
 }
 
 
-
+//Diese Zeichen nicht eingebbar
+$("input[type='email']").on('keypress', function (e) {
+  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+*"' £\/?-]/;
+    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    console.log(key)
+    if(blockSpecialRegex.test(key) || $.isNumeric(key)){
+      e.preventDefault();
+      return false;
+    }
+    });
+$("input[type='email']").on('keypress', function (e) {
+  var blockSpecialRegex = /[A-Z]/;
+    var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    console.log(key)
+    if(blockSpecialRegex.test(key) || $.isNumeric(key)){
+      e.preventDefault();
+      return false;
+    }
+    });    
 
 
 //autocomlete nach @
