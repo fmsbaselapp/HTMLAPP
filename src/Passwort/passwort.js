@@ -82,7 +82,7 @@ var input = document.getElementById("email_field"),
     },
     inputHandler = function() {
       newValue = input.value;
-
+      
       //wenn @ gedrückt wird
       if (difference(oldValue, newValue) === "@"){ //check if @
 
