@@ -13,8 +13,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if(user != null){
 
       var email_id = user.email;
-      var email_verified = user.emailVerified;
-      //document.getElementById("user_para").innerHTML = "Angemeldet mit : " + email_id + <br/> + "Edubs-Mail bestätigt?" + email_verified;   
+      document.getElementById("user_para").innerHTML = "Eigeloggt mit : " + email_id;    
     }
 
   } else {
@@ -41,7 +40,7 @@ function login(){
       "style", "border-color: #F44336; background-color: white;");
     document.getElementById("password_field").setAttribute(
       "style", "border-color: #F44336; background-color: white;");
-    document.getElementById("passwort-zurücksetzen").style.display = "block";   
+    document.getElementById("passwort-zurücksetzen").style.display = "block";
     //window.alert(errorMessage);
 
     // ...
@@ -49,9 +48,37 @@ function login(){
 
 }
 
+  function create_user(){
+
+    var userEmail = document.getElementById("email_field").value;
+    var userPass = document.getElementById("password_field").value;
+  
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+      // Hier wird der Error wiedergegeben
+      var errorCode = error.code;
+      var errorMessage = "Es ist ein Fehler aufgetreten: Dein Passwort stimmt nicht überein oder du hast keine Edubs-Mailadresse benutzt.";
+      
+      window.alert(errorMessage);
+
+    });
+
+}
+
 function logout(){
   firebase.auth().signOut();
 }
+
+function send_verification(){
+  var user = firebase.auth().currentUser;
+
+user.sendEmailVerification().then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+});
+
+}
+
 
 //Diese Zeichen nicht eingebbar
 $("input[type='email']").on('keypress', function (e) {
@@ -63,7 +90,7 @@ $("input[type='email']").on('keypress', function (e) {
       return false;
     }
     });
-    
+
 $("input[type='email']").on('keypress', function (e) {
   var blockSpecialRegex = /[A-Z]/g;
     var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
@@ -74,7 +101,7 @@ $("input[type='email']").on('keypress', function (e) {
     }
     });    
 
-    
+
 
 
 //autocomlete nach @
@@ -101,20 +128,14 @@ var input = document.getElementById("email_field"),
       if (difference(oldValue, newValue) === "@"){ //check if @
 
         document.getElementById("email_field").value = newValue + "stud.edubs.ch";
-        document.getElementById("email_field").readOnly = true;
-        setTimeout(function() {
-          console.log("Callback Funktion wird aufgerufen");
-          document.getElementById("email_field").readOnly = false;
-          }, 2000);
-        mail_check();      
+        mail_check();
+        document.getElementById("password_field").focus();
+        focused.next("password_field").trigger('touchstart');
       };
     };
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
-
-
-
 
 
 //check ob eingabe bei inputs stimmt => rot/grüner rahmen bei inputs
@@ -124,8 +145,6 @@ function mail_check(){
     if (re.test($(this).val())) {
       document.getElementById("email_field").style.borderColor = "#54C17C";
       document.getElementById("email_field").style.backgroundColor = "white";
-      document.getElementById("password_field").focus();
-      focused.next("password_field").trigger('touchstart');
     } else {
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";

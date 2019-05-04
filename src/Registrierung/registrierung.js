@@ -128,14 +128,20 @@ var input = document.getElementById("email_field"),
       if (difference(oldValue, newValue) === "@"){ //check if @
 
         document.getElementById("email_field").value = newValue + "stud.edubs.ch";
+        document.getElementById("email_field").readOnly = true;
+        setTimeout(function() {
+          console.log("Callback Funktion wird aufgerufen");
+          document.getElementById("email_field").readOnly = false;
+          }, 2000);
         mail_check();
-        document.getElementById("password_field").focus();
-        focused.next("password_field").trigger('touchstart');
       };
     };
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
+
+
+  
 
 
 //check ob eingabe bei inputs stimmt => rot/grüner rahmen bei inputs
@@ -145,6 +151,8 @@ function mail_check(){
     if (re.test($(this).val())) {
       document.getElementById("email_field").style.borderColor = "#54C17C";
       document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("password_field").focus();
+      focused.next("password_field").trigger('touchstart');
     } else {
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";
