@@ -15,7 +15,7 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
 
 //Diese Zeichen nicht eingebbar
 $("input[type='email']").on('keypress', function (e) {
-  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+*"' £\/?-]/;
+  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+*"'£\/?-]/;
     var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     console.log(key)
     if(blockSpecialRegex.test(key) || $.isNumeric(key)){
@@ -23,8 +23,9 @@ $("input[type='email']").on('keypress', function (e) {
       return false;
     }
     });
+
 $("input[type='email']").on('keypress', function (e) {
-  var blockSpecialRegex = /[A-Z]/;
+  var blockSpecialRegex = /[A-Z]/g;
     var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     console.log(key)
     if(blockSpecialRegex.test(key) || $.isNumeric(key)){
@@ -33,6 +34,8 @@ $("input[type='email']").on('keypress', function (e) {
     }
     });    
     
+
+
 
 //autocomlete nach @
 var input = document.getElementById("email_field"),
@@ -58,13 +61,21 @@ var input = document.getElementById("email_field"),
       if (difference(oldValue, newValue) === "@"){ //check if @
 
         document.getElementById("email_field").value = newValue + "stud.edubs.ch";
+        document.getElementById("email_field").readOnly = true;
+        setTimeout(function() {
+          console.log("Callback Funktion wird aufgerufen");
+          document.getElementById("email_field").readOnly = false;
+          }, 2000);
         mail_check();
-        document.getElementsByName("html").blur();
       };
     };
 
 input.addEventListener('keydown', keyDownHandler);
 input.addEventListener('input', inputHandler);
+
+
+
+
 
 //check ob eingabe bei inputs stimmt => rot/grüner rahmen bei inputs
 function mail_check(){
@@ -73,9 +84,22 @@ function mail_check(){
     if (re.test($(this).val())) {
       document.getElementById("email_field").style.borderColor = "#54C17C";
       document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("password_field").focus();
+      focused.next("password_field").trigger('touchstart');
     } else {
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";
+    }
+});
+
+document.getElementById("password_field").keyup(function () {
+  var re = /^.{8,}$/;  //starkes passwort
+    if (re.test($(this).val())) {
+      document.getElementById("password_field").style.borderColor = "#54C17C";
+      document.getElementById("password_field").style.backgroundColor = "white";
+    } else {
+      document.getElementById("password_field").style.borderColor = "#F44336";
+      document.getElementById("password_field").style.backgroundColor = "white";
     }
 });
 }
