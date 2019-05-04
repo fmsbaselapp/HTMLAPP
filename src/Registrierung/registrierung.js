@@ -40,6 +40,7 @@ function login(){
       document.getElementById("mail_error").style.display = "block";
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("passwort-zurücksetzen").style.display = "none";
       mailcheck = false
     }
     
@@ -53,6 +54,7 @@ function login(){
       document.getElementById("password_error").style.display = "block";
       document.getElementById("password_field").style.borderColor = "#F44336";
       document.getElementById("password_field").style.backgroundColor = "white";
+      document.getElementById("passwort-zurücksetzen").style.display = "none";
       passwortcheck = false
     }
 

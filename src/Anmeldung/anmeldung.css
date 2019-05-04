@@ -117,18 +117,31 @@ p#anmeldung-untertitel {
   margin-bottom: 1vh;
 }
 
-a#registrierung-link {
-  margin: auto;
+#mail_error {
+  margin: 0;
   font-size: 3.5vw;
   font-family: poppins,sans-serif;
-  color: rgba(0, 0, 0, 0.36);
-  text-align: center;
-  width: calc(100vw - 10vw);
-  bottom: 5vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  position: absolute;
+  color: #F44336;
+  position: relative;
+  display: none;
+}
+
+#password_error {
+  margin: 0;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  position: relative;
+  display: none;
+}
+
+#mail_verwendet_error {
+  margin-top: 2vh;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  position: relative;
+  display: none;
 }
 
 #passwort-zurücksetzen {
@@ -142,6 +155,20 @@ a#registrierung-link {
       align-self: center;
   position: relative;
   display: none;
+}
+
+a#registrierung-link {
+  margin: auto;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: rgba(0, 0, 0, 0.36);
+  text-align: center;
+  width: calc(100vw - 10vw);
+  bottom: 5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
 }
 
 h3 {

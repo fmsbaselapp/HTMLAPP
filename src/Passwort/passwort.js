@@ -1,4 +1,30 @@
 function passwort_zurücksetzen(){
+
+  var mail = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm; 
+  var passwort = /^.{8,}$/;
+    if (mail.test(document.getElementById("email_field").value)){
+      document.getElementById("email_field").style.borderColor = "#54C17C";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("mail_error").style.display = "none";
+      mailcheck = true
+    }
+    else{
+      document.getElementById("mail_error").style.display = "block";
+      document.getElementById("email_field").style.borderColor = "#F44336";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("passwort-zurücksetzen").style.display = "none";
+      mailcheck = false
+    }
+  
+    if (mailcheck){
+      passwort_zurücksetzen_ausführen()
+    }
+  }
+
+
+
+
+function passwort_zurücksetzen_ausführen(){
   var auth = firebase.auth();
   var emailAddress = document.getElementById("email_field").value;
 
