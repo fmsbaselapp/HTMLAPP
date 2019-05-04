@@ -7,7 +7,7 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
 }).catch(function(error) {
   // An error happened.
   var errorCode = error.code;
-  var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs-Mail wurde nicht gefunden.";
+  var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs E-Mail wurde nicht gefunden.";
 
   window.alert(errorMessage);
 });

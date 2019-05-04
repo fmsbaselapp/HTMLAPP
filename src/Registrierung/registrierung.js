@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // Nutzer ist angemeldet
 
     document.getElementById("user_div").style.display = "block";
-    document.getElementById("anmeldung-karte").style.display = "none";
+    document.getElementById("registrierung-karte").style.display = "none";
     document.getElementById("button").style.display = "none";       
 
 
@@ -25,7 +25,45 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
+//check edubs mail before login
 function login(){
+
+  var mail = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm; 
+  var passwort = /^.{8,}$/;
+    if (mail.test(document.getElementById("email_field").value)){
+      document.getElementById("email_field").style.borderColor = "#54C17C";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("mail_error").style.display = "none";
+      mailcheck = true
+    }
+    else{
+      document.getElementById("mail_error").style.display = "block";
+      document.getElementById("email_field").style.borderColor = "#F44336";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      mailcheck = false
+    }
+    
+    if ((passwort.test(document.getElementById("password_field").value))){
+      document.getElementById("password_field").style.borderColor = "#54C17C";
+      document.getElementById("password_field").style.backgroundColor = "white";
+      document.getElementById("password_error").style.display = "none";
+      passwortcheck = true
+    }
+    else{
+      document.getElementById("password_error").style.display = "block";
+      document.getElementById("password_field").style.borderColor = "#F44336";
+      document.getElementById("password_field").style.backgroundColor = "white";
+      passwortcheck = false
+    }
+
+    if (mailcheck && passwortcheck){
+      login_ausführen()
+    }
+  }
+
+
+
+function login_ausführen(){
 
   var userEmail = document.getElementById("email_field").value;
   var userPass = document.getElementById("password_field").value;
@@ -33,14 +71,9 @@ function login(){
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
     // Hier wird der Error wiedergegeben
     var errorCode = error.code;
-    var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs-Mail oder dein Passwort stimmt nicht überein!";
-    //Css Values
+    var errorMessage = "Es ist ein Fehler aufgetreten: Deine Edubs E-Mail oder dein Passwort stimmt nicht überein!";
+    
   
-    document.getElementById("email_field").setAttribute(
-      "style", "border-color: #F44336; background-color: white;");
-    document.getElementById("password_field").setAttribute(
-      "style", "border-color: #F44336; background-color: white;");
-    document.getElementById("passwort-zurücksetzen").style.display = "block";
     //window.alert(errorMessage);
 
     // ...
@@ -48,18 +81,56 @@ function login(){
 
 }
 
-  function create_user(){
+//check edubs mail before create user
+function create_user(){
+
+  var mail = /^([a-zA-Z]{2,15})+\.+([a-zA-Z]{2,15})+@(stud.edubs.ch)$/gm; 
+  var passwort = /^.{8,}$/;
+    if (mail.test(document.getElementById("email_field").value)){
+      document.getElementById("email_field").style.borderColor = "#54C17C";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      document.getElementById("mail_error").style.display = "none";
+      mailcheck = true
+    }
+    else{
+      document.getElementById("mail_error").style.display = "block";
+      document.getElementById("email_field").style.borderColor = "#F44336";
+      document.getElementById("email_field").style.backgroundColor = "white";
+      mailcheck = false
+    }
+    
+    if ((passwort.test(document.getElementById("password_field").value))){
+      document.getElementById("password_field").style.borderColor = "#54C17C";
+      document.getElementById("password_field").style.backgroundColor = "white";
+      document.getElementById("password_error").style.display = "none";
+      passwortcheck = true
+    }
+    else{
+      document.getElementById("password_error").style.display = "block";
+      document.getElementById("password_field").style.borderColor = "#F44336";
+      document.getElementById("password_field").style.backgroundColor = "white";
+      passwortcheck = false
+    }
+
+    if (mailcheck && passwortcheck){
+      create_user_ausführen()
+    }
+  }
+
+
+  function create_user_ausführen(){
 
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
   
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
       // Hier wird der Error wiedergegeben
-      var errorCode = error.code;
-      var errorMessage = "Es ist ein Fehler aufgetreten: Dein Passwort stimmt nicht überein oder du hast keine Edubs-Mailadresse benutzt.";
-      
-      window.alert(errorMessage);
-
+      document.getElementById("mail_verwendet_error").style.display = "block";
+      document.getElementById("anmeldung_link2").style.display = "block";
+      document.getElementById("mailtosupport").style.display = "block";
+      document.getElementById("link").style.display = "none";
+      document.getElementById("email_field").style.borderColor = "#F44336";
+      document.getElementById("email_field").style.backgroundColor = "white";
     });
 
 }
@@ -82,7 +153,7 @@ user.sendEmailVerification().then(function() {
 
 //Diese Zeichen nicht eingebbar
 $("input[type='email']").on('keypress', function (e) {
-  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+ *"'£\/?-]/;
+  var blockSpecialRegex = /[~`!%#$%^&()_={}[\]:;,<>+ *"'£\/?¨^'`?¿≠|“±´‘¶\⁄‹”∞ı—`°`∑€®†Ω¡ø§å∂ƒªº∆¬¢¥≈©√∫~µ«…–~∫≤’‡™◊˙˚»÷]/;
     var key = String.fromCharCode(!e.charCode ? e.which : e.charCode);
     console.log(key)
     if(blockSpecialRegex.test(key) || $.isNumeric(key)){

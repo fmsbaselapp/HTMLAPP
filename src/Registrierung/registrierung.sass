@@ -116,17 +116,12 @@ div#button
 button
   background: #419AEC
   color: white
-
   padding: $padding
-  
   border: 0
-
   height: 13vh
   width: 100%
 
   position: relative
-  
-
   border-radius: 50vw
   box-shadow: $box-schatten
 
@@ -170,8 +165,67 @@ p#registrierung-untertitel
   margin-right: 7vw
   margin-bottom: 1vh
 
+#mail_error
+  margin: 0
+  font-size: 3.5vw
+  font-family: poppins,sans-serif
+  color: #F44336
+  position: relative
+  display: none
 
-a //link
+#password_error
+  margin: 0
+  font-size: 3.5vw
+  font-family: poppins,sans-serif
+  color: #F44336
+  position: relative
+  display: none
+
+#mail_verwendet_error
+  margin-top: 2vh
+  font-size: 3.5vw
+  font-family: poppins,sans-serif
+  color: #F44336
+  position: relative
+  display: none
+
+//==========================================buttons
+#anmeldung_link2
+  text-align: center
+  font-family: poppins,sans-serif
+  font-style: normal
+  font-size: 3.5vw
+  margin: auto
+  width: auto
+  line-height: 6vh
+  background-color: #419AEC
+  font-weight: 500
+  border-radius: 50vw
+  color: white
+  margin-top: 2vh
+  border-radius: 50vw
+  box-shadow: $box-schatten
+  display: none
+  
+#mailtosupport
+  text-align: center
+  margin: auto
+  margin-top: 2vh
+  width: auto
+  line-height: 6vh
+  font-size: 3.5vw
+  font-family: poppins,sans-serif
+  font-weight: 500
+  color: white
+  position: relative
+  background-color: #419AEC
+  border-radius: 50vw
+  border-radius: 50vw
+  box-shadow: $box-schatten
+  display: none
+//==========================================
+
+a#link
   margin: auto
   font-size: 3.5vw
   font-family: poppins,sans-serif
@@ -183,6 +237,9 @@ a //link
   -webkit-transform: translateX(-50%)
   transform: translateX(-50%)
   position: absolute
+
+a:visited
+  color: white
 
 h3
   margin: auto

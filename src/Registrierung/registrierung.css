@@ -145,7 +145,72 @@ p#registrierung-untertitel {
   margin-bottom: 1vh;
 }
 
-a {
+#mail_error {
+  margin: 0;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  position: relative;
+  display: none;
+}
+
+#password_error {
+  margin: 0;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  position: relative;
+  display: none;
+}
+
+#mail_verwendet_error {
+  margin-top: 2vh;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  color: #F44336;
+  position: relative;
+  display: none;
+}
+
+#anmeldung_link2 {
+  text-align: center;
+  font-family: poppins,sans-serif;
+  font-style: normal;
+  font-size: 3.5vw;
+  margin: auto;
+  width: auto;
+  line-height: 6vh;
+  background-color: #419AEC;
+  font-weight: 500;
+  border-radius: 50vw;
+  color: white;
+  margin-top: 2vh;
+  border-radius: 50vw;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#mailtosupport {
+  text-align: center;
+  margin: auto;
+  margin-top: 2vh;
+  width: auto;
+  line-height: 6vh;
+  font-size: 3.5vw;
+  font-family: poppins,sans-serif;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  background-color: #419AEC;
+  border-radius: 50vw;
+  border-radius: 50vw;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+a#link {
   margin: auto;
   font-size: 3.5vw;
   font-family: poppins,sans-serif;
@@ -157,6 +222,10 @@ a {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
+}
+
+a:visited {
+  color: white;
 }
 
 h3 {

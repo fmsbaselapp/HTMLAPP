@@ -1,4 +1,5 @@
 <?php
+
 //PDF suchen und anzeigen
 function getPDF($subject){
 	$dir = "/var/www/vhosts/eucomis.ch/httpdocs/exams_pdf/$subject/";

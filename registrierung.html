@@ -71,8 +71,27 @@
       </div>
 
       </form>
+
+       <!--Input Error / Passwort zurücksetzen-->
+       <div style="margin-top: 2vh; text-align:center;">
+       <p id="mail_error">Verwende deine Edubs E-Mail.</p>
+       <p id="password_error">Dein Passwort ist zu kurz.</p>
+       <p id="mail_verwendet_error">Deine Edubs E-Mail ist bereits registriert!</p>
+       <p id="anmeldung_link2"><a href="index.html" style="text-decoration:none;">Melde dich <span style="text-decoration:underline;">hier</span> an<span></a></p>
+      
+       <script>
+         function mailto(){
+           var UserEmail = document.getElementById("email_field").value;
+           var EmailVairable = "support@classmateapp.ch";
+           var SubjectVariable = "Meine%20Edubs%20E-Mail%20" + "[" +UserEmail+ "]" + "%20wird%20bereits%20verwendet.";
+           var Inhalt = "Liebes%20Classmate%20Team%0D%0A%0D%0ABeim%20Einloggen%20wurde%20mir%20folgendes%20angezeigt: %0D%0A„Ihre%20Edubs%20E-Mail%20ist%20bereits%20registriert!“ %0D%0A%0D%0A•%20Ich%20habe%20meine%20eigene%20Edubs%20E-Mail-Adresse%20verwendet. %0D%0A%0D%0A•%20Ich%20habe%20mich%20mit%20noch%20nie%20mit%20meiner%20Edubs%20E-Mail-%0D%0A Adresse%20bei%20Classmate%20registriert. %0D%0A%0D%0AMeine%20Edubs%20E-Mail-Adresse%20lautet:%0D%0A"+UserEmail;
+           window.location.href='mailto:'+EmailVairable+'?subject='+SubjectVariable+'&body='+Inhalt
+           }
+       </script>
+       <p id="mailtosupport" ><a href="#" onclick="mailto()" style="text-decoration:none;">Wende dich an den <span style="text-decoration:underline;">Support</span></a></p>
+      </div>
       <!--Hier gehts zur Registrierung-->
-        <a href="index.html" style="text-decoration:none;">Du bist schon registriert?<br>Hier gehts zur <span style="text-decoration:underline;">Anmeldung</span></a>
+      <a id="link" href="index.html" style="text-decoration:none;">Du bist schon registriert?<br>Hier gehts zur <span style="text-decoration:underline;">Anmeldung</span></a>
         
     </section>
 
@@ -86,7 +105,7 @@
     <h3>Willkommen!</h3>
     <p id="user_para">Du hat dich erfolgreich registriert!</p>
     <button onclick="logout()">Abmelden</button>
-    <button onclick="send_verification()">Edubs-Mail bestätigen</button>
+    <button onclick="send_verification()">Edubs E-Mail bestätigen</button>
   </div>
 
 
