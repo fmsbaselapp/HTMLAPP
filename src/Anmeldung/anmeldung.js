@@ -142,7 +142,7 @@ var input = document.getElementById("email_field"),
         setTimeout(function() {
           console.log("Callback Funktion wird aufgerufen");
           document.getElementById("email_field").readOnly = false;
-          }, 2000);
+          }, 2500);
         mail_check();      
       };
     };

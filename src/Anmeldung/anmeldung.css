@@ -171,6 +171,10 @@ a#registrierung-link {
   position: absolute;
 }
 
+a:visited {
+  color: white;
+}
+
 h3 {
   margin: auto;
 }
