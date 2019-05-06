@@ -116,6 +116,7 @@ function create_user(){
 
     if (mailcheck && passwortcheck){
       create_user_ausführen()
+      send_verification()
     }
   }
 
@@ -124,7 +125,7 @@ function create_user(){
 
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
-  
+
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
       // Hier wird der Error wiedergegeben
       document.getElementById("mail_verwendet_error").style.display = "block";
@@ -133,7 +134,6 @@ function create_user(){
       document.getElementById("link").style.display = "none";
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";
-      send_verification()
     });
 
 }
