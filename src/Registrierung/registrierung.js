@@ -116,7 +116,7 @@ function create_user(){
 
     if (mailcheck && passwortcheck){
       create_user_ausführen()
-      send_verification()
+      
     }
   }
 
