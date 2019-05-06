@@ -133,6 +133,7 @@ function create_user(){
       document.getElementById("link").style.display = "none";
       document.getElementById("email_field").style.borderColor = "#F44336";
       document.getElementById("email_field").style.backgroundColor = "white";
+      send_verification()
     });
 
 }
